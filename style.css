@@ -24,6 +24,7 @@ ul { list-style: none; }
   --white: oklch(100% 0 none);
   --gray-100: oklch(97.02% 0 none);
   --gray-200: oklch(92.19% 0 none);
+  --cobalt: oklch(30% 0.16 253.58);
   --gray-400: oklch(71.37% 0.0192 261.32);
   --gray-600: oklch(55.10% 0.0234 264.36);
   --radius: 12px;
@@ -361,7 +362,7 @@ ul { list-style: none; }
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.5px;
-  color: var(--dark);
+  color: var(--cobalt);
 }
 .about-desc {
   font-size: 16px;
@@ -445,7 +446,7 @@ ul { list-style: none; }
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1px;
-  color: var(--dark);
+  color: var(--cobalt);
 }
 .stats-grid {
   display: grid;
@@ -588,7 +589,7 @@ ul { list-style: none; }
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1px;
-  color: var(--dark);
+  color: var(--cobalt);
 }
 .innovation-grid {
   display: grid;
@@ -707,7 +708,7 @@ ul { list-style: none; }
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1px;
-  color: var(--dark);
+  color: var(--cobalt);
   margin-bottom: 20px;
 }
 .cta-partner-text p {
