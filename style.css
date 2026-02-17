@@ -672,6 +672,7 @@ ul { list-style: none; }
   justify-content: center;
   margin-bottom: 20px;
   font-size: 20px;
+  color: var(--accent);
 }
 .sustain-card h4 {
   font-size: 17px;
