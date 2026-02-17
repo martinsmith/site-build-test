@@ -188,10 +188,12 @@ ul { list-style: none; }
 }
 
 .logo {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+}
+.logo-img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
