@@ -165,7 +165,7 @@ ul { list-style: none; }
   align-items: center;
   gap: 8px;
   padding: 14px 28px;
-  border-radius: 50px;
+  border-radius: var(--radius);
   font-size: 14px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
@@ -373,7 +373,7 @@ ul { list-style: none; }
   gap: 8px;
   background: oklch(100% 0 none / 0.08);
   border: 1px solid oklch(100% 0 none / 0.12);
-  border-radius: 50px;
+  border-radius: var(--radius);
   padding: 8px 20px;
   font-size: 14px;
   font-weight: 500;
