@@ -404,6 +404,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  color: var(--accent);
   font-size: 22px;
 }
 .service-card h3 {
