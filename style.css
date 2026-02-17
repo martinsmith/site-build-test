@@ -25,6 +25,7 @@ ul { list-style: none; }
   --gray-100: oklch(97.02% 0 none);
   --gray-200: oklch(92.19% 0 none);
   --cobalt: oklch(30% 0.16 253.58);
+  --overlay: oklch(15% 0.12 253.58);
   --gray-400: oklch(71.37% 0.0192 261.32);
   --gray-600: oklch(55.10% 0.0234 264.36);
   --radius: 12px;
@@ -250,9 +251,9 @@ ul { list-style: none; }
 
 /* ===== HERO ===== */
 #hero {
-  background: linear-gradient(to bottom, var(--dark-bg-deep), var(--dark-bg));
-  padding: 200px 24px 60px;
-  text-align: center;
+  background: url('/hero1.webp') center / cover no-repeat;
+  padding: 200px 24px 120px;
+  text-align: left;
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -261,7 +262,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at 50% 30%, oklch(81.03% 0.1356 198.40 / 0.08) 0%, transparent 70%);
+  background: linear-gradient(to bottom, oklch(15% 0.12 253.58 / 0.75) 0%, oklch(15% 0.12 253.58 / 0.55) 50%, oklch(15% 0.12 253.58 / 0.80) 100%);
   pointer-events: none;
 }
 
@@ -292,14 +293,14 @@ ul { list-style: none; }
   font-size: 18px;
   color: oklch(100% 0 none / 0.6);
   max-width: 500px;
-  margin: 0 auto 40px;
+  margin: 0 0 40px;
   font-weight: 400;
 }
 
 .hero-ctas {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
   margin-bottom: 60px;
 }
@@ -307,9 +308,8 @@ ul { list-style: none; }
 .hero-stats {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 48px;
-  margin-bottom: 60px;
 }
 .stat-number {
   font-size: 48px;
@@ -332,16 +332,12 @@ ul { list-style: none; }
   background: oklch(100% 0 none / 0.15);
 }
 
-.hero-image-placeholder {
-  max-width: 1100px;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
   margin: 0 auto;
-  height: 500px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.hero-image-placeholder .placeholder-img {
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, oklch(28.16% 0.0340 255.80) 0%, oklch(21.35% 0.0334 251.31) 50%, oklch(27.69% 0.0487 260.71) 100%);
+  padding: 0 24px;
 }
 
 
