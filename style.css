@@ -72,6 +72,75 @@ ul { list-style: none; }
   grid-template-columns: inherit;
 }
 
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Base states — hidden before entering viewport */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.anim-fade-in {
+  opacity: 0;
+}
+
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* Transition timing — applied to all animated elements */
+[class*="anim-"] {
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger, 0) * 0.12s);
+}
+
+/* Triggered states — when parent or self has .in-view */
+.in-view.anim-fade-up,
+.in-view > .anim-fade-up,
+.in-view > * > .anim-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.in-view.anim-fade-in,
+.in-view > .anim-fade-in,
+.in-view > * > .anim-fade-in {
+  opacity: 1;
+}
+
+.in-view.anim-slide-left,
+.in-view > .anim-slide-left,
+.in-view > * > .anim-slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.in-view.anim-slide-right,
+.in-view > .anim-slide-right,
+.in-view > * > .anim-slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hero on-load animations (above fold — not scroll-triggered) */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-anim {
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--delay, 0) * 1s);
+}
+
 /* ===== UTILITIES ===== */
 
 .section-tag {

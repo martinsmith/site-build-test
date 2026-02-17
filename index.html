@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
 
@@ -63,17 +65,17 @@
   <!-- HERO SECTION -->
   <section id="hero">
     <div class="hero-content">
-      <div class="hero-badge">
+      <div class="hero-badge hero-anim" style="--delay: 0.15">
         <span class="badge-icon">⚡</span>
         <span>Secure, trusted energy</span>
       </div>
-      <h1 class="hero-title">Your Energy,<br/>Our Expertise</h1>
-      <p class="hero-subtitle">Fueling Growth with Energy You Can Rely On</p>
-      <div class="hero-ctas">
+      <h1 class="hero-title hero-anim" style="--delay: 0.3">Your Energy,<br/>Our Expertise</h1>
+      <p class="hero-subtitle hero-anim" style="--delay: 0.45">Fueling Growth with Energy You Can Rely On</p>
+      <div class="hero-ctas hero-anim" style="--delay: 0.6">
         <a href="#" class="btn btn-primary">Explore Now <span class="arrow">→</span></a>
         <a href="#" class="btn btn-outline-light">Explore Now <span class="arrow">→</span></a>
       </div>
-      <div class="hero-stats">
+      <div class="hero-stats hero-anim" style="--delay: 0.75">
         <div class="stat">
           <div class="stat-number">21<span class="stat-plus">+</span></div>
           <div class="stat-label">Years of Expertise</div>
@@ -89,12 +91,12 @@
 
   <!-- ABOUT SECTION -->
   <section id="about" class="content-grid">
-    <div class="about-grid breakout">
-      <div class="about-left">
+    <div class="about-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+      <div class="about-left anim-slide-left">
         <span class="section-tag">ABOUT US</span>
         <h2 class="about-title">Our mission is to provide energy that fuels progress combining technology performance and sustainability for a stronger smarter future</h2>
       </div>
-      <div class="about-right">
+      <div class="about-right anim-slide-right">
         <p class="about-desc">Delivering reliable energy solutions through decades of experience, innovation, and leadership in the oil and gas industry.</p>
         <a href="#" class="btn btn-dark">know more <span class="arrow">→</span></a>
       </div>
@@ -103,38 +105,38 @@
 
   <!-- SERVICES SECTION -->
   <section id="services" class="content-grid">
-    <div class="services-grid breakout">
-      <div class="service-card">
+    <div class="services-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+      <div class="service-card anim-fade-up" style="--stagger: 0">
         <div class="service-card-icon"><i class="fa-solid fa-flask-vial"></i></div>
         <h3>Refining &amp; Processing</h3>
         <p>Driving innovation and efficiency across the refining and processing landscape to deliver high-quality fuels</p>
         <a href="#" class="view-more">view more →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card anim-fade-up" style="--stagger: 1">
         <div class="service-card-icon"><i class="fa-solid fa-oil-well"></i></div>
         <h3>Exploration &amp; Production</h3>
         <p>Committed to advancing performance, safety, and sustainability across every stage of the energy value chain</p>
         <a href="#" class="view-more">view more →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card anim-fade-up" style="--stagger: 2">
         <div class="service-card-icon"><i class="fa-solid fa-warehouse"></i></div>
         <h3>Storage &amp; Distribution</h3>
         <p>Driving innovation and operational refinings to shape a sustainable energy future for generations to come</p>
         <a href="#" class="view-more">view more →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card anim-fade-up" style="--stagger: 3">
         <div class="service-card-icon"><i class="fa-solid fa-truck-fast"></i></div>
         <h3>Transportation &amp; Logistics</h3>
         <p>Transforming industry challenges into opportunities with cutting edge technology and forward thinking strategies</p>
         <a href="#" class="view-more">view more →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card anim-fade-up" style="--stagger: 4">
         <div class="service-card-icon"><i class="fa-solid fa-gears"></i></div>
         <h3>Engineering &amp; Maintenance</h3>
         <p>Ensuring reliable operations through expert engineering and proactive maintenance.</p>
         <a href="#" class="view-more">view more →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card anim-fade-up" style="--stagger: 5">
         <div class="service-card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
         <h3>Technical Consulting</h3>
         <p>Expert guidance delivering practical solutions for complex technical challenges.</p>
@@ -145,26 +147,26 @@
 
   <!-- STATS SECTION -->
   <section id="stats" class="content-grid">
-    <div class="stats-header">
+    <div class="stats-header anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
       <h2>Numbers that prove our leadership in global oil, gas, and energy solutions</h2>
     </div>
-    <div class="stats-grid breakout">
-      <div class="stats-card">
+    <div class="stats-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+      <div class="stats-card anim-fade-up" style="--stagger: 0">
         <div class="big-number">21<span>+</span></div>
         <h4>Years of Expertise</h4>
         <p>Leveraging years of expertise, we deliver innovative solutions tailored to the oil and gas industry.</p>
       </div>
-      <div class="stats-card">
+      <div class="stats-card anim-fade-up" style="--stagger: 1">
         <div class="big-number">70<span>+</span></div>
         <h4>Countries Served</h4>
         <p>We proudly provide energy solutions and services to clients across multiple countries worldwide.</p>
       </div>
-      <div class="stats-card">
+      <div class="stats-card anim-fade-up" style="--stagger: 2">
         <div class="big-number">130<span>k+</span></div>
         <h4>Barrels Daily</h4>
         <p>Thousands of barrels daily flow from our facilities, supporting energy needs and industrial growth worldwide.</p>
       </div>
-      <div class="stats-card">
+      <div class="stats-card anim-fade-up" style="--stagger: 3">
         <div class="big-number">99.8<span>%</span></div>
         <h4>Safety Compliance</h4>
         <p>We prioritize safety compliance to minimize incidents and uphold industry-leading standards across all projects.</p>
@@ -174,15 +176,15 @@
 
   <!-- PROJECTS SECTION -->
   <section id="projects" class="content-grid">
-    <div class="projects-header breakout">
+    <div class="projects-header breakout anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
       <div>
         <span class="section-tag">Transforming resources</span>
         <h2>Delivering success through energy-driven innovation</h2>
       </div>
       <a href="#" class="btn btn-outline-light">View more <span class="arrow">→</span></a>
     </div>
-    <div class="projects-layout breakout">
-      <div class="project-main">
+    <div class="projects-layout breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+      <div class="project-main anim-slide-left">
         <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(24.37% 0.0497 252.46) 0%, oklch(31.76% 0.0639 254.75) 50%, oklch(24.37% 0.0497 252.46) 100%);"><span>Project Image</span></div>
         <div class="project-main-content">
           <h3>Aqua Core Gas Basin</h3>
@@ -191,19 +193,19 @@
         </div>
       </div>
       <div class="project-sidebar">
-        <div class="project-side-card">
+        <div class="project-side-card anim-fade-up" style="--stagger: 0">
           <div class="project-num">01</div>
           <h4>Sustainable Extraction</h4>
           <p>Sustainable extraction focuses on minimizing environmental impact, improving efficiency, and ensuring responsible resource management for long-term energy.</p>
           <a href="#" class="view-more" style="color: var(--accent);">view more →</a>
         </div>
-        <div class="project-side-card">
+        <div class="project-side-card anim-fade-up" style="--stagger: 1">
           <div class="project-num">02</div>
           <h4>Core Energy Systems</h4>
           <p>Core Energy Systems integrates advanced technology and data analytics to enhance energy efficiency, optimize resource utilization, and drive sustainable operations.</p>
           <a href="#" class="view-more" style="color: var(--accent);">view more →</a>
         </div>
-        <div class="project-side-card">
+        <div class="project-side-card anim-fade-up" style="--stagger: 2">
           <div class="project-num">03</div>
           <h4>Aqua Core Gas Basin</h4>
           <p>Our operations at Aqua Core Gas Basin combine strategic planning, advanced technology, and environmental stewardship for optimal energy production.</p>
@@ -215,11 +217,11 @@
 
   <!-- INNOVATION SECTION -->
   <section id="innovation" class="content-grid">
-    <div class="innovation-header">
+    <div class="innovation-header anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
       <h2>Delivering dependable oil and gas solutions you can trust, worldwide</h2>
     </div>
-    <div class="innovation-grid breakout">
-        <div class="innovation-card">
+    <div class="innovation-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+        <div class="innovation-card anim-fade-up" style="--stagger: 0">
           <div class="innovation-card-img">
             <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(27.87% 0.0367 249.26) 0%, oklch(35.09% 0.0372 244.54) 100%);"><span>Innovation Image</span></div>
           </div>
@@ -229,7 +231,7 @@
             <a href="#" class="btn btn-dark">read more <span class="arrow">→</span></a>
           </div>
         </div>
-        <div class="innovation-card">
+        <div class="innovation-card anim-fade-up" style="--stagger: 1">
           <div class="innovation-card-img">
             <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(25.51% 0.0612 305.57) 0%, oklch(28.87% 0.0386 245.10) 100%);"><span>Metrics Image</span></div>
           </div>
@@ -239,7 +241,7 @@
             <a href="#" class="btn btn-dark">read more <span class="arrow">→</span></a>
           </div>
         </div>
-        <div class="innovation-card">
+        <div class="innovation-card anim-fade-up" style="--stagger: 2">
           <div class="innovation-card-img">
             <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(30% 0.06 253.58) 0%, oklch(38% 0.08 240) 100%);"><span>Safety Image</span></div>
           </div>
@@ -249,7 +251,7 @@
             <a href="#" class="btn btn-dark">read more <span class="arrow">→</span></a>
           </div>
         </div>
-        <div class="innovation-card">
+        <div class="innovation-card anim-fade-up" style="--stagger: 3">
           <div class="innovation-card-img">
             <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(28% 0.05 220) 0%, oklch(34% 0.07 253.58) 100%);"><span>Digital Image</span></div>
           </div>
@@ -264,30 +266,30 @@
 
   <!-- SUSTAINABILITY SECTION -->
   <section id="sustainability" class="content-grid">
-    <div class="sustainability-header breakout">
+    <div class="sustainability-header breakout anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
       <div>
         <span class="section-tag">Sustainability &amp; Innovation</span>
         <h2>Advancing sustainable success through modern innovation and tech</h2>
       </div>
       <a href="#" class="btn btn-outline-light">Explore now <span class="arrow">→</span></a>
     </div>
-    <div class="sustainability-grid breakout">
-        <div class="sustain-card">
+    <div class="sustainability-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+        <div class="sustain-card anim-fade-up" style="--stagger: 0">
           <div class="sustain-card-icon"><i class="fa-solid fa-leaf"></i></div>
           <h4>Lower Carbon Operations</h4>
           <p>Implementing cleaner technologies to achieve environmentally responsible energy operations.</p>
         </div>
-        <div class="sustain-card">
+        <div class="sustain-card anim-fade-up" style="--stagger: 1">
           <div class="sustain-card-icon"><i class="fa-solid fa-microscope"></i></div>
           <h4>Innovation in Exploration</h4>
           <p>Exploration innovation drives performance, safety and environmental responsibility consistently.</p>
         </div>
-        <div class="sustain-card">
+        <div class="sustain-card anim-fade-up" style="--stagger: 2">
           <div class="sustain-card-icon"><i class="fa-solid fa-handshake"></i></div>
           <h4>Community Engagement</h4>
           <p>Empowering communities with education, resources and sustainable development projects.</p>
         </div>
-        <div class="sustain-card">
+        <div class="sustain-card anim-fade-up" style="--stagger: 3">
           <div class="sustain-card-icon"><i class="fa-solid fa-recycle"></i></div>
           <h4>Green Technology Adoption</h4>
           <p>Committing to environmental stewardship through modern green technology adoption.</p>
@@ -297,11 +299,11 @@
 
   <!-- CTA SECTION -->
   <section id="cta-partner" class="content-grid">
-    <div class="cta-partner-inner breakout">
-      <div class="cta-partner-img">
+    <div class="cta-partner-inner breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+      <div class="cta-partner-img anim-slide-left">
         <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(27.87% 0.0367 249.26) 0%, oklch(35.31% 0.0349 248.85) 100%);"><span>Partner Image</span></div>
       </div>
-      <div class="cta-partner-text">
+      <div class="cta-partner-text anim-slide-right">
         <h2>Your energy partner for a stronger tomorrow</h2>
         <p>We collaborate with industries worldwide, delivering reliable, innovative, and sustainable energy solutions. Our expertise ensures operational efficiency, safety, and long-term growth, making us a trusted partner for every project.</p>
         <a href="#" class="btn btn-dark">See Details <span class="arrow">→</span></a>
@@ -311,7 +313,7 @@
 
   <!-- BOTTOM CTA -->
   <section id="cta-bottom" class="content-grid">
-    <div class="cta-bottom-inner">
+    <div class="cta-bottom-inner anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
       <h2>Empowering industries through sustainable oil and gas development</h2>
       <p>Driving growth and innovation while minimizing environmental impact in oil and gas operations.</p>
       <a href="#" class="btn btn-primary">Get a quote <span class="arrow">→</span></a>
