@@ -793,10 +793,11 @@ ul { list-style: none; }
   gap: 24px;
 }
 .sector-card {
+  position: relative;
   background: oklch(100% 0 none / 0.04);
   border: 1px solid oklch(100% 0 none / 0.08);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 24px 32px;
   flex: 1;
   transition: all 0.3s;
 }
@@ -805,10 +806,12 @@ ul { list-style: none; }
   border-color: oklch(81.03% 0.1356 198.40 / 0.3);
 }
 .sector-card .sector-num {
-  font-size: 14px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 16px;
 }
 .sector-card h4 {
   font-size: 20px;
@@ -820,6 +823,20 @@ ul { list-style: none; }
   color: oklch(100% 0 none / 0.55);
   line-height: 1.6;
   margin-bottom: 16px;
+}
+
+/* View more link */
+.view-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap 0.3s ease;
+}
+.view-more:hover {
+  gap: 10px;
 }
 
 
