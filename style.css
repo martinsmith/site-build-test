@@ -26,6 +26,7 @@ ul { list-style: none; }
   --gray-200: oklch(92.19% 0 none);
   --cobalt: oklch(30% 0.16 253.58);
   --overlay: oklch(15% 0.12 253.58);
+  --dark-mid: oklch(38% 0.12 253.58);
   --gray-400: oklch(71.37% 0.0192 261.32);
   --gray-600: oklch(55.10% 0.0234 264.36);
   --radius: 12px;
@@ -573,7 +574,7 @@ ul { list-style: none; }
   padding: 18px 24px;
   border: none;
   border-radius: var(--radius);
-  background: var(--dark);
+  background: linear-gradient(135deg, var(--dark-mid), var(--dark));
   color: var(--white);
   font-family: inherit;
   font-size: 15px;
@@ -590,7 +591,7 @@ ul { list-style: none; }
   opacity: 0.9;
 }
 .sc-tab.active {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), oklch(75% 0.14 198.40));
   color: var(--white);
 }
 .sc-tab.active i {
