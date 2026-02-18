@@ -134,7 +134,7 @@
     </div>
 
     <!-- Panel 0 — Installation -->
-    <div class="sc-panel breakout" x-show="active === 0" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+    <div class="sc-panel breakout" x-show="active === 0" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 0 }">
       <div class="sc-panel-img">
         <img src="/hero1.webp" alt="Lift Installation" />
       </div>
@@ -142,19 +142,19 @@
         <h3>New Lift Installations</h3>
         <p>Our lift company specialises in the installation of all lifts. These include:</p>
         <ul class="check-list">
-          <li><i class="fa-solid fa-check"></i> Passenger lifts</li>
-          <li><i class="fa-solid fa-check"></i> Goods lifts</li>
-          <li><i class="fa-solid fa-check"></i> Platform lifts and access lifts</li>
-          <li><i class="fa-solid fa-check"></i> Car lifts</li>
-          <li><i class="fa-solid fa-check"></i> Food lifts</li>
-          <li><i class="fa-solid fa-check"></i> Dumbwaiter lifts</li>
+          <li style="--li:0"><i class="fa-solid fa-check"></i> Passenger lifts</li>
+          <li style="--li:1"><i class="fa-solid fa-check"></i> Goods lifts</li>
+          <li style="--li:2"><i class="fa-solid fa-check"></i> Platform lifts and access lifts</li>
+          <li style="--li:3"><i class="fa-solid fa-check"></i> Car lifts</li>
+          <li style="--li:4"><i class="fa-solid fa-check"></i> Food lifts</li>
+          <li style="--li:5"><i class="fa-solid fa-check"></i> Dumbwaiter lifts</li>
         </ul>
-        <a href="#" class="sc-cta">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="#" class="sc-cta" style="--li-total:6">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
       </div>
     </div>
 
     <!-- Panel 1 — Maintenance -->
-    <div class="sc-panel breakout" x-show="active === 1" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+    <div class="sc-panel breakout" x-show="active === 1" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 1 }">
       <div class="sc-panel-img">
         <img src="/hero1.webp" alt="Lift Maintenance" />
       </div>
@@ -162,17 +162,17 @@
         <h3>Planned Maintenance &amp; Servicing</h3>
         <p>Failure to keep up with regular maintenance not only involves an increased cost, it also compromises the reliability of the lift. To prevent this, our elevator company offers the following services:</p>
         <ul class="check-list">
-          <li><i class="fa-solid fa-check"></i> Regular maintenance</li>
-          <li><i class="fa-solid fa-check"></i> Compliance with Health &amp; Safety requirements</li>
-          <li><i class="fa-solid fa-check"></i> Advice and planning of future repairs</li>
-          <li><i class="fa-solid fa-check"></i> UK stock for replacement parts</li>
+          <li style="--li:0"><i class="fa-solid fa-check"></i> Regular maintenance</li>
+          <li style="--li:1"><i class="fa-solid fa-check"></i> Compliance with Health &amp; Safety requirements</li>
+          <li style="--li:2"><i class="fa-solid fa-check"></i> Advice and planning of future repairs</li>
+          <li style="--li:3"><i class="fa-solid fa-check"></i> UK stock for replacement parts</li>
         </ul>
-        <a href="#" class="sc-cta">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="#" class="sc-cta" style="--li-total:4">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
       </div>
     </div>
 
     <!-- Panel 2 — Modernisation -->
-    <div class="sc-panel breakout" x-show="active === 2" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+    <div class="sc-panel breakout" x-show="active === 2" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 2 }">
       <div class="sc-panel-img">
         <img src="/hero1.webp" alt="Lift Modernisation" />
       </div>
@@ -180,18 +180,18 @@
         <h3>Modernise Your Lifts</h3>
         <p>A modernisation can give just as good of a result as a new installation, for a more cost-effective price. If your lift is suitable for modernisation, the benefits include:</p>
         <ul class="check-list">
-          <li><i class="fa-solid fa-check"></i> Reduced downtime</li>
-          <li><i class="fa-solid fa-check"></i> Improved appearance &amp; image</li>
-          <li><i class="fa-solid fa-check"></i> Greater ride quality</li>
-          <li><i class="fa-solid fa-check"></i> Minimal disruption in the building</li>
-          <li><i class="fa-solid fa-check"></i> Reduced running costs</li>
+          <li style="--li:0"><i class="fa-solid fa-check"></i> Reduced downtime</li>
+          <li style="--li:1"><i class="fa-solid fa-check"></i> Improved appearance &amp; image</li>
+          <li style="--li:2"><i class="fa-solid fa-check"></i> Greater ride quality</li>
+          <li style="--li:3"><i class="fa-solid fa-check"></i> Minimal disruption in the building</li>
+          <li style="--li:4"><i class="fa-solid fa-check"></i> Reduced running costs</li>
         </ul>
-        <a href="#" class="sc-cta">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="#" class="sc-cta" style="--li-total:5">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
       </div>
     </div>
 
     <!-- Panel 3 — Repairs -->
-    <div class="sc-panel breakout" x-show="active === 3" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+    <div class="sc-panel breakout" x-show="active === 3" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 3 }">
       <div class="sc-panel-img">
         <img src="/hero1.webp" alt="Lift Repairs" />
       </div>
@@ -199,13 +199,13 @@
         <h3>Breakdowns &amp; Repairs</h3>
         <p>Breakdowns can be a real problem for everyone impacted. When choosing Altius Lifts for your lift needs, our lift company will do the following:</p>
         <ul class="check-list">
-          <li><i class="fa-solid fa-check"></i> Conduct a free site survey</li>
-          <li><i class="fa-solid fa-check"></i> Issue a comprehensive report on our findings</li>
-          <li><i class="fa-solid fa-check"></i> Highlight any safety issues or components at risk</li>
-          <li><i class="fa-solid fa-check"></i> Provide an action plan for the best course of action</li>
-          <li><i class="fa-solid fa-check"></i> Complete the repairs to the highest standard</li>
+          <li style="--li:0"><i class="fa-solid fa-check"></i> Conduct a free site survey</li>
+          <li style="--li:1"><i class="fa-solid fa-check"></i> Issue a comprehensive report on our findings</li>
+          <li style="--li:2"><i class="fa-solid fa-check"></i> Highlight any safety issues or components at risk</li>
+          <li style="--li:3"><i class="fa-solid fa-check"></i> Provide an action plan for the best course of action</li>
+          <li style="--li:4"><i class="fa-solid fa-check"></i> Complete the repairs to the highest standard</li>
         </ul>
-        <a href="#" class="sc-cta">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="#" class="sc-cta" style="--li-total:5">More Information <i class="fa-solid fa-arrow-right arrow"></i></a>
       </div>
     </div>
   </section>
