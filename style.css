@@ -797,6 +797,88 @@ ul { list-style: none; }
 
 
 
+
+/* ===== FAQ SECTION ===== */
+#faq {
+  background: var(--cream);
+  padding: var(--section-pad);
+}
+.faq-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.faq-header h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: var(--cobalt);
+  margin-bottom: 12px;
+}
+.faq-header p {
+  font-size: 16px;
+  color: var(--gray-600);
+}
+
+/* Accordion list */
+.faq-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.faq-item {
+  border-bottom: 1px solid var(--accent);
+  transition: background 0.3s ease;
+}
+.faq-item.is-open {
+  background: oklch(95% 0.02 253.58);
+}
+
+/* Trigger button */
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cobalt);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+.faq-trigger:hover {
+  color: var(--dark);
+}
+.faq-trigger i {
+  font-size: 14px;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.faq-trigger.active i {
+  transform: rotate(180deg);
+}
+
+/* Answer panel */
+.faq-answer {
+  overflow: hidden;
+}
+.faq-answer p {
+  padding: 0 24px 20px;
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
 /* ===== SUSTAINABILITY SECTION ===== */
 #sustainability {
   background: linear-gradient(to bottom, var(--dark-bg-deep), var(--dark-bg));
