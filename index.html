@@ -91,138 +91,105 @@
   </section>
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="content-grid">
-    <div class="services-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
-      <div class="service-card anim-fade-up" style="--stagger: 0">
-        <div class="service-card-icon"><i class="fa-solid fa-elevator"></i></div>
-        <h3>New Lift Installation</h3>
-        <p>Transform your lift to look, feel and perform like a brand-new installation.</p>
-        <a href="#" class="view-more">view more →</a>
-      </div>
-      <div class="service-card anim-fade-up" style="--stagger: 1">
-        <div class="service-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-        <h3>Modernisation</h3>
-        <p>Committed to advancing performance, safety, and sustainability across every stage of the energy value chain</p>
-        <a href="#" class="view-more">view more →</a>
-      </div>
-      <div class="service-card anim-fade-up" style="--stagger: 2">
-        <div class="service-card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-        <h3>Planned Maintenance</h3>
-        <p>Reduce the downtime of your lift and keep systems running smoothly.</p>
-        <a href="#" class="view-more">view more →</a>
-      </div>
-      <div class="service-card anim-fade-up" style="--stagger: 3">
-        <div class="service-card-icon"><i class="fa-solid fa-wrench"></i></div>
-        <h3>Breakdowns &amp; Repairs</h3>
-        <p>Here to help you get back up and running to reduce downtime to a minimum.</p>
-        <a href="#" class="view-more">view more →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- STATS SECTION -->
-  <!-- <section id="stats" class="content-grid">
-    <div class="stats-header anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
-      <h2>Numbers that prove our leadership in global oil, gas, and energy solutions</h2>
-    </div>
-    <div class="stats-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
-      <div class="stats-card anim-fade-up" style="--stagger: 0">
-        <div class="big-number">21<span>+</span></div>
-        <h4>Years of Expertise</h4>
-        <p>Leveraging years of expertise, we deliver innovative solutions tailored to the oil and gas industry.</p>
-      </div>
-      <div class="stats-card anim-fade-up" style="--stagger: 1">
-        <div class="big-number">70<span>+</span></div>
-        <h4>Countries Served</h4>
-        <p>We proudly provide energy solutions and services to clients across multiple countries worldwide.</p>
-      </div>
-      <div class="stats-card anim-fade-up" style="--stagger: 2">
-        <div class="big-number">130<span>k+</span></div>
-        <h4>Barrels Daily</h4>
-        <p>Thousands of barrels daily flow from our facilities, supporting energy needs and industrial growth worldwide.</p>
-      </div>
-      <div class="stats-card anim-fade-up" style="--stagger: 3">
-        <div class="big-number">99.8<span>%</span></div>
-        <h4>Safety Compliance</h4>
-        <p>We prioritize safety compliance to minimize incidents and uphold industry-leading standards across all projects.</p>
-      </div>
-    </div>
-  </section> -->
-
-    <!-- SERVICE DETAILS SECTION -->
-  <section id="service-details" class="content-grid">
-    <div class="detail-header breakout anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
+  <section id="services" class="content-grid" x-data="{ active: 0 }" x-intersect.once="$el.classList.add('in-view')">
+    <div class="sc-header breakout anim-fade-up">
       <h2>Dependable Lift Servicing &amp; Maintenance Throughout the North West</h2>
     </div>
-    <div class="detail-grid breakout" x-data x-intersect.once="$el.classList.add('in-view')">
-        <div class="detail-card anim-fade-up" style="--stagger: 0">
-          <div class="detail-card-img">
-            <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(27.87% 0.0367 249.26) 0%, oklch(35.09% 0.0372 244.54) 100%);"><img src="/hero1.webp" alt="Installation Image" /></div>
-          </div>
-          <div class="detail-card-body">
-            <h3>New Lift Installations</h3>
-            <p>Our lift company specialises in the installation of all lifts. These include:</p>
-            <ul>
-            <li>Passenger lifts</li>
-            <li>Goods lifts</li>
-            <li>Platform lifts and access lifts</li>
-            <li>Car lifts</li>
-            <li>Food lifts</li>
-            <li>Dumbwaiter lifts</li></ul>
-            <a href="#" class="btn btn-dark">More Information <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div class="detail-card anim-fade-up" style="--stagger: 1">
-          <div class="detail-card-img">
-            <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(25.51% 0.0612 305.57) 0%, oklch(28.87% 0.0386 245.10) 100%);"><img src="/hero1.webp" alt="Maintenance Image" /></div>
-          </div>
-          <div class="detail-card-body">
-            <h3>Planned Maintenance & Servicing</h3>
-            <p>Failure to keep up with regular maintenance not only involves an increased cost, it also compromises the reliability of the lift. To prevent this, our elevator company offers the following services:</p>
-            <ul>
-              <li>Regular maintenance</li>
-              <li>Compliance with Health & Safety requirements</li>
-              <li>Advice and planning of future repairs</li>
-              <li>UK stock for replacement parts</li>
-            </ul>
-            <a href="#" class="btn btn-dark">More Information <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div class="detail-card anim-fade-up" style="--stagger: 2">
-          <div class="detail-card-img">
-            <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(30% 0.06 253.58) 0%, oklch(38% 0.08 240) 100%);"><img src="/hero1.webp" alt="Maintenance Image" /></div>
-          </div>
-          <div class="detail-card-body">
-            <h3>Modernise Your Lifts</h3>
-            <p>A modernisation can give just as good of a result as a new installation, for a more cost-effective price. If your lift is suitable for modernisation, the benefits include:</p>
-            <ul>
-              <li>Reduced downtime</li>
-              <li>Improved appearance & image</li>
-              <li>Greater ride quality</li>
-              <li>Minimal disruption in the building</li>
-              <li>Reduced running costs</li>
-            </ul>
-            <a href="#" class="btn btn-dark">More Information <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div class="detail-card anim-fade-up" style="--stagger: 3">
-          <div class="detail-card-img">
-            <div class="placeholder-img" style="border-radius: 0; background: linear-gradient(135deg, oklch(28% 0.05 220) 0%, oklch(34% 0.07 253.58) 100%);"><img src="/hero1.webp" alt="Maintenance Image" /></div>
-          </div>
-          <div class="detail-card-body">
-            <h3>Breakdowns & repairs</h3>
-            <p>Breakdowns can be a real problem for everyone impacted. When choosing Caledonian Lifts Manchester for your lift needs, our lift company will do the following:</p>
-            <ul>
-              <li>Conduct a free site survey</li>
-              <li>Issue a comprehensive report on our findings</li>
-              <li>Highlight any safety issues or components at risk</li>
-              <li>Provide an action plan for the best course of action</li>
-              <li>Complete the repairs to the highest standard</li>
-            </ul>
-            <a href="#" class="btn btn-dark">More Information <span class="arrow">→</span></a>
-          </div>
-        </div>
+
+    <!-- Tab buttons -->
+    <div class="sc-tabs breakout anim-fade-up" style="--stagger: 0">
+      <button class="sc-tab" :class="{ 'active': active === 0 }" @click="active = 0">
+        <i class="fa-solid fa-elevator"></i>
+        <span>Installation</span>
+      </button>
+      <button class="sc-tab" :class="{ 'active': active === 1 }" @click="active = 1">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <span>Maintenance</span>
+      </button>
+      <button class="sc-tab" :class="{ 'active': active === 2 }" @click="active = 2">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Modernisation</span>
+      </button>
+      <button class="sc-tab" :class="{ 'active': active === 3 }" @click="active = 3">
+        <i class="fa-solid fa-wrench"></i>
+        <span>Repairs</span>
+      </button>
+    </div>
+
+    <!-- Panel 0 — Installation -->
+    <div class="sc-panel breakout" x-show="active === 0" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+      <div class="sc-panel-img">
+        <img src="/hero1.webp" alt="Lift Installation" />
+      </div>
+      <div class="sc-panel-body">
+        <h3>New Lift Installations</h3>
+        <p>Our lift company specialises in the installation of all lifts. These include:</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Passenger lifts</li>
+          <li><i class="fa-solid fa-check"></i> Goods lifts</li>
+          <li><i class="fa-solid fa-check"></i> Platform lifts and access lifts</li>
+          <li><i class="fa-solid fa-check"></i> Car lifts</li>
+          <li><i class="fa-solid fa-check"></i> Food lifts</li>
+          <li><i class="fa-solid fa-check"></i> Dumbwaiter lifts</li>
+        </ul>
+        <a href="#" class="btn btn-outline-light">More Information <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- Panel 1 — Maintenance -->
+    <div class="sc-panel breakout" x-show="active === 1" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+      <div class="sc-panel-img">
+        <img src="/hero1.webp" alt="Lift Maintenance" />
+      </div>
+      <div class="sc-panel-body">
+        <h3>Planned Maintenance &amp; Servicing</h3>
+        <p>Failure to keep up with regular maintenance not only involves an increased cost, it also compromises the reliability of the lift. To prevent this, our elevator company offers the following services:</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Regular maintenance</li>
+          <li><i class="fa-solid fa-check"></i> Compliance with Health &amp; Safety requirements</li>
+          <li><i class="fa-solid fa-check"></i> Advice and planning of future repairs</li>
+          <li><i class="fa-solid fa-check"></i> UK stock for replacement parts</li>
+        </ul>
+        <a href="#" class="btn btn-outline-light">More Information <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- Panel 2 — Modernisation -->
+    <div class="sc-panel breakout" x-show="active === 2" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+      <div class="sc-panel-img">
+        <img src="/hero1.webp" alt="Lift Modernisation" />
+      </div>
+      <div class="sc-panel-body">
+        <h3>Modernise Your Lifts</h3>
+        <p>A modernisation can give just as good of a result as a new installation, for a more cost-effective price. If your lift is suitable for modernisation, the benefits include:</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Reduced downtime</li>
+          <li><i class="fa-solid fa-check"></i> Improved appearance &amp; image</li>
+          <li><i class="fa-solid fa-check"></i> Greater ride quality</li>
+          <li><i class="fa-solid fa-check"></i> Minimal disruption in the building</li>
+          <li><i class="fa-solid fa-check"></i> Reduced running costs</li>
+        </ul>
+        <a href="#" class="btn btn-outline-light">More Information <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- Panel 3 — Repairs -->
+    <div class="sc-panel breakout" x-show="active === 3" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end">
+      <div class="sc-panel-img">
+        <img src="/hero1.webp" alt="Lift Repairs" />
+      </div>
+      <div class="sc-panel-body">
+        <h3>Breakdowns &amp; Repairs</h3>
+        <p>Breakdowns can be a real problem for everyone impacted. When choosing Altius Lifts for your lift needs, our lift company will do the following:</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Conduct a free site survey</li>
+          <li><i class="fa-solid fa-check"></i> Issue a comprehensive report on our findings</li>
+          <li><i class="fa-solid fa-check"></i> Highlight any safety issues or components at risk</li>
+          <li><i class="fa-solid fa-check"></i> Provide an action plan for the best course of action</li>
+          <li><i class="fa-solid fa-check"></i> Complete the repairs to the highest standard</li>
+        </ul>
+        <a href="#" class="btn btn-outline-light">More Information <span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
