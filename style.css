@@ -144,12 +144,42 @@ ul { list-style: none; }
 /* ===== UTILITIES ===== */
 
 .section-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--accent);
+  margin-bottom: 20px;
+}
+/* Light background variant */
+.section-tag-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: oklch(45.08% 0.1379 253.58 / 0.08);
+  border: 1px solid oklch(45.08% 0.1379 253.58 / 0.12);
+  border-radius: var(--radius-sm);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+/* Dark background variant */
+.section-tag-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: oklch(100% 0 none / 0.08);
+  border: 1px solid oklch(100% 0 none / 0.12);
+  border-radius: var(--radius-sm);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: oklch(100% 0 none / 0.8);
   margin-bottom: 20px;
 }
 
@@ -387,7 +417,7 @@ ul { list-style: none; }
   gap: 8px;
   background: oklch(100% 0 none / 0.08);
   border: 1px solid oklch(100% 0 none / 0.12);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   padding: 8px 20px;
   font-size: 14px;
   font-weight: 500;
