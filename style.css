@@ -185,7 +185,7 @@ ul { list-style: none; }
 
 .arrow {
   display: inline-block;
-  margin-left: 8px;
+  font-size: 12px;
   transition: transform 0.3s;
 }
 
