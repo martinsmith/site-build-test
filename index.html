@@ -97,15 +97,23 @@
     x-data="{
       active: 0,
       timer: null,
+      delay: null,
       start() {
+        clearInterval(this.timer);
         this.timer = setInterval(() => { this.active = (this.active + 1) % 4 }, 10000);
       },
       pause() {
         clearInterval(this.timer);
+        clearTimeout(this.delay);
         this.timer = null;
+        this.delay = null;
+      },
+      restart() {
+        this.pause();
+        this.delay = setTimeout(() => this.start(), 20000);
       }
     }"
-    x-init="setTimeout(() => start(), 20000)"
+    x-init="delay = setTimeout(() => start(), 20000)"
     x-intersect.once="$el.classList.add('in-view')"
   >
     <div class="sc-header breakout anim-fade-up">
@@ -115,19 +123,19 @@
 
     <!-- Tab buttons -->
     <div class="sc-tabs breakout anim-fade-up" style="--stagger: 0">
-      <button class="sc-tab" :class="{ 'active': active === 0 }" @click="pause(); active = 0; setTimeout(() => start(), 20000)">
+      <button class="sc-tab" :class="{ 'active': active === 0 }" @click="active = 0; restart()">
         <i class="fa-solid fa-elevator"></i>
         <span>Installation</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 1 }" @click="pause(); active = 1; setTimeout(() => start(), 20000)">
+      <button class="sc-tab" :class="{ 'active': active === 1 }" @click="active = 1; restart()">
         <i class="fa-solid fa-clipboard-check"></i>
         <span>Maintenance</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 2 }" @click="pause(); active = 2; setTimeout(() => start(), 20000)">
+      <button class="sc-tab" :class="{ 'active': active === 2 }" @click="active = 2; restart()">
         <i class="fa-solid fa-wand-magic-sparkles"></i>
         <span>Modernisation</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 3 }" @click="pause(); active = 3; setTimeout(() => start(), 20000)">
+      <button class="sc-tab" :class="{ 'active': active === 3 }" @click="active = 3; restart()">
         <i class="fa-solid fa-wrench"></i>
         <span>Repairs</span>
       </button>
