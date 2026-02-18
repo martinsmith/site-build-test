@@ -189,6 +189,27 @@ ul { list-style: none; }
   transition: transform 0.3s;
 }
 
+
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  position: relative;
+  height: 0;
+  z-index: 2;
+}
+.section-divider::after {
+  content: '';
+  position: absolute;
+  left: 80%;
+  width: 1px;
+  height: clamp(60px, 10vw, 150px);
+  top: calc(clamp(60px, 10vw, 150px) * -0.6);
+  background: white;
+}
+.section-divider:nth-of-type(even)::after {
+  left: 20%;
+}
+
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
