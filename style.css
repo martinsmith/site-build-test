@@ -630,6 +630,25 @@ ul { list-style: none; }
   transform: translateY(0);
 }
 
+/* Panel CTA link */
+.sc-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  align-self: flex-end;
+  transition: gap 0.3s ease;
+}
+.sc-cta:hover {
+  gap: 12px;
+}
+.sc-cta .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
 /* ===== STATS SECTION ===== */
 #stats {
   background: var(--cream);
