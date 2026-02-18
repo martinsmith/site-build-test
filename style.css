@@ -290,7 +290,7 @@ ul { list-style: none; }
 }
 #navbar.scrolled {
   top: 0;
-  background: oklch(45.08% 0.1379 253.58 / 0.95);
+  background: linear-gradient(to left, var(--dark-bg-deep), var(--dark));
   backdrop-filter: blur(12px);
 }
 
