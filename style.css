@@ -51,6 +51,7 @@ ul { list-style: none; }
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Spacing & sizing */
+  --padding-inline: 3rem;
   --radius: 12px;
   --radius-sm: 8px;
   --radius-lg: 20px;
@@ -60,7 +61,6 @@ ul { list-style: none; }
 
 /* ===== CONTENT-GRID LAYOUT ===== */
 .content-grid {
-  --padding-inline: 3rem;
   --content-max-width: 900px;
   --breakout-max-width: 1200px;
   --breakout-size: calc(
@@ -393,7 +393,7 @@ ul { list-style: none; }
 
 /* ===== HERO ===== */
 #hero {
-  padding: 200px 24px 120px;
+  padding: 200px var(--padding-inline) 120px;
   text-align: left;
   color: var(--white);
   position: relative;
@@ -461,7 +461,6 @@ ul { list-style: none; }
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 
@@ -1071,13 +1070,6 @@ ul { list-style: none; }
   #topbar { display: none; }
   #navbar { top: 0; }
 
-  /* Service tabs stack vertically */
-  .sc-tabs { flex-direction: column; flex-wrap: nowrap; }
-  .sc-tab { flex: 1 1 100%; }
-  .sc-tab span { display: inline; }
-  .sc-panel-img { min-height: 220px; }
-  .sc-panel-body { padding: 24px; }
-
   /* Sectors: 1 column, sidebar back to 2-col grid */
   .sectors-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .sectors-layout { grid-template-columns: 1fr; }
@@ -1087,15 +1079,30 @@ ul { list-style: none; }
   .cta-partner-inner { grid-template-columns: 1fr; }
 }
 
-/* ---- 600px: Footer all single column ---- */
+/* ---- 600px: Service tabs stack, footer single column, sectors sidebar 1-col ---- */
 @media (max-width: 600px) {
+  /* Service tabs stack vertically */
+  .sc-tabs { flex-direction: column; flex-wrap: nowrap; }
+  .sc-tab { flex: 1 1 100%; }
+  .sc-tab span { display: inline; }
+  .sc-panel-img { min-height: 220px; }
+  .sc-panel-body { padding: 24px; }
+
+  /* Footer all single column */
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: auto; }
   .footer-col:last-child { grid-column: auto; }
+
+  /* Sectors sidebar 1-col */
+  .sector-sidebar { grid-template-columns: 1fr; }
 }
 
-/* ---- 480px: Tighten padding, sectors sidebar 1-col ---- */
+/* ---- 480px: Tighten padding ---- */
 @media (max-width: 480px) {
-  .content-grid { --padding-inline: 1.5rem; }
-  .sector-sidebar { grid-template-columns: 1fr; }
+  :root { --padding-inline: 1.5rem; }
+}
+
+/* ---- 460px: Hero CTAs stack ---- */
+@media (max-width: 460px) {
+  .hero-ctas { flex-direction: column; }
 }
