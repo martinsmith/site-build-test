@@ -1,6 +1,12 @@
-// Navbar scroll effect
+// ===== CSS Imports =====
+import './css/base.css';
+import './css/components.css';
+import './css/home.css';
+
+// ===== Navbar scroll effect =====
 const navbar = document.getElementById('navbar');
 const topbar = document.getElementById('topbar');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
@@ -10,6 +16,6 @@ window.addEventListener('scroll', () => {
     if (topbar) topbar.style.transform = 'translateY(0)';
   }
 });
-if (topbar) topbar.style.transition = 'transform 0.3s ease';
 
+if (topbar) topbar.style.transition = 'transform 0.3s ease';
 

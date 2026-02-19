@@ -1,0 +1,226 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ===== VARIABLES ===== */
+:root {
+  /* Core palette */
+  --dark: oklch(45.08% 0.1379 253.58);
+  --dark-bg-deep: oklch(25% 0.09 253.58);
+  --dark-bg: oklch(35% 0.11 253.58);
+  --dark-mid: oklch(38% 0.12 253.58);
+  --cream: oklch(93% 0.015 253.58);
+  --accent: oklch(81.03% 0.1356 198.40);
+  --accent-light: oklch(90% 0.08 198.40);
+  --white: oklch(100% 0 none);
+  --cobalt: oklch(30% 0.16 253.58);
+  --overlay: oklch(15% 0.12 253.58);
+
+  /* Grays */
+  --gray-200: oklch(92.19% 0 none);
+  --gray-600: oklch(55.10% 0.0234 264.36);
+
+  /* White alpha scale */
+  --white-04: oklch(100% 0 none / 0.04);
+  --white-06: oklch(100% 0 none / 0.06);
+  --white-08: oklch(100% 0 none / 0.08);
+  --white-10: oklch(100% 0 none / 0.1);
+  --white-12: oklch(100% 0 none / 0.12);
+  --white-20: oklch(100% 0 none / 0.2);
+  --white-30: oklch(100% 0 none / 0.3);
+  --white-35: oklch(100% 0 none / 0.35);
+  --white-50: oklch(100% 0 none / 0.5);
+  --white-55: oklch(100% 0 none / 0.55);
+  --white-60: oklch(100% 0 none / 0.6);
+  --white-65: oklch(100% 0 none / 0.65);
+  --white-75: oklch(100% 0 none / 0.75);
+  --white-80: oklch(100% 0 none / 0.8);
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Spacing & sizing */
+  --padding-inline: 3rem;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --section-pad: 140px 0;
+}
+
+/* ===== CONTENT-GRID LAYOUT ===== */
+.content-grid {
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Base states — hidden before entering viewport */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* Transition timing — applied to all animated elements */
+[class*="anim-"] {
+  transition: opacity 0.7s var(--ease-out-expo),
+              transform 0.7s var(--ease-out-expo);
+  transition-delay: calc(var(--stagger, 0) * 0.12s);
+}
+
+/* Triggered states — when parent or self has .in-view */
+.in-view.anim-fade-up,
+.in-view .anim-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.in-view.anim-slide-left,
+.in-view .anim-slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.in-view.anim-slide-right,
+.in-view .anim-slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hero on-load animations (above fold — not scroll-triggered) */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-anim {
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out-expo) forwards;
+  animation-delay: calc(var(--delay, 0) * 1s);
+}
+
+/* ===== UTILITIES ===== */
+
+/* Section tag — shared base */
+.section-tag-light,
+.section-tag-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--radius-sm);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* Light background variant */
+.section-tag-light {
+  background: oklch(45.08% 0.1379 253.58 / 0.08);
+  border: 1px solid oklch(45.08% 0.1379 253.58 / 0.12);
+  color: var(--dark);
+}
+/* Dark background variant */
+.section-tag-dark {
+  background: var(--white-08);
+  border: 1px solid var(--white-12);
+  color: var(--white-80);
+}
+
+/* Section heading — reusable class for large h2 */
+.section-heading {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+/* Cover image — reusable class */
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark section background — reusable utility */
+.section-dark {
+  background: linear-gradient(to bottom, var(--dark-bg-deep), var(--dark-bg));
+  color: var(--white);
+}
+
+/* Arrow link — shared text-link base */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+.arrow-link:hover {
+  gap: 12px;
+}
+
+/* Arrow icon */
+.arrow {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+/* ===== BASE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  :root { --section-pad: 100px 0; }
+}
+
+@media (max-width: 480px) {
+  :root { --padding-inline: 1.5rem; }
+}
