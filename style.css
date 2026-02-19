@@ -121,22 +121,19 @@ ul { list-style: none; }
 
 /* Triggered states — when parent or self has .in-view */
 .in-view.anim-fade-up,
-.in-view > .anim-fade-up,
-.in-view > * > .anim-fade-up {
+.in-view .anim-fade-up {
   opacity: 1;
   transform: translateY(0);
 }
 
 .in-view.anim-slide-left,
-.in-view > .anim-slide-left,
-.in-view > * > .anim-slide-left {
+.in-view .anim-slide-left {
   opacity: 1;
   transform: translateX(0);
 }
 
 .in-view.anim-slide-right,
-.in-view > .anim-slide-right,
-.in-view > * > .anim-slide-right {
+.in-view .anim-slide-right {
   opacity: 1;
   transform: translateX(0);
 }
@@ -768,8 +765,25 @@ ul { list-style: none; }
   background: var(--cream);
   padding: var(--section-pad);
 }
+/* FAQ layout */
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: start;
+}
+.faq-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 420px;
+  margin-top: 59px;
+}
+.faq-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .faq-header {
-  text-align: center;
   margin-bottom: 48px;
 }
 .faq-header h2 {
@@ -788,8 +802,6 @@ ul { list-style: none; }
 /* Accordion list */
 .faq-list {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1068,6 +1080,10 @@ ul { list-style: none; }
   .sector-main { height: 380px; align-self: auto; order: 2; }
   .sector-sidebar { order: 1; }
   .sector-sidebar { grid-template-columns: 1fr 1fr; }
+
+  /* FAQ: single column, image below */
+  .faq-layout { grid-template-columns: 1fr; }
+  .faq-img { max-height: 350px; margin-top: 0; }
 
   /* CTA partner: single column */
   .cta-partner-inner { grid-template-columns: 1fr; }

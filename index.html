@@ -267,65 +267,72 @@
 
   <!-- FAQ SECTION -->
   <section id="faq" class="content-grid">
-    <div class="faq-header breakout anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
-      <span class="section-tag-light"><i class="fa-solid fa-circle-question"></i> FAQ</span>
-      <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to know about our lift services.</p>
-    </div>
-    <div class="faq-list breakout" x-data="{ open: null }" x-intersect.once="$el.classList.add('in-view')">
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-        <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
-          <span>How often should a lift be serviced?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 0" x-collapse>
-          <p>We recommend that lifts are serviced at least every three months to ensure safe and reliable operation. Regular maintenance helps identify potential issues early, reducing the risk of costly breakdowns and ensuring compliance with safety regulations.</p>
+    <div class="faq-layout breakout" x-data="{ open: null }" x-intersect.once="$el.classList.add('in-view')">
+      <div class="faq-content">
+        <div class="faq-header anim-fade-up">
+          <span class="section-tag-light"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our lift services.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
+            <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+              <span>How often should a lift be serviced?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 0" x-collapse>
+              <p>We recommend that lifts are serviced at least every three months to ensure safe and reliable operation. Regular maintenance helps identify potential issues early, reducing the risk of costly breakdowns and ensuring compliance with safety regulations.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
+            <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+              <span>What types of lifts do you install?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 1" x-collapse>
+              <p>We install a wide range of lifts including passenger lifts, goods lifts, platform lifts, car lifts, food lifts, and dumbwaiter lifts. Each installation is tailored to the specific requirements of your building and usage needs.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
+            <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+              <span>How long does a lift modernisation take?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 2" x-collapse>
+              <p>The duration depends on the scope of the modernisation, but most projects are completed within two to four weeks. We work to minimise disruption to your building and its occupants throughout the process.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
+            <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+              <span>Do you offer emergency callout services?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 3" x-collapse>
+              <p>Yes, we provide a 24/7/365 emergency callout service across the North West. Our engineers are on hand to respond quickly to breakdowns and entrapments, ensuring minimal downtime and maximum safety for users.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 4 }" style="--stagger: 4">
+            <button class="faq-trigger" @click="open = open === 4 ? null : 4" :class="{ 'active': open === 4 }">
+              <span>What areas do you cover?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 4" x-collapse>
+              <p>We primarily serve Manchester and the wider North West region, including Stockport, Bolton, Salford, Oldham, and surrounding areas. Contact us to confirm whether we cover your location.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 5 }" style="--stagger: 5">
+            <button class="faq-trigger" @click="open = open === 5 ? null : 5" :class="{ 'active': open === 5 }">
+              <span>Is a free site survey included?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 5" x-collapse>
+              <p>Absolutely. We offer a free, no-obligation site survey for all new enquiries. Our engineers will assess your requirements and provide a detailed report with recommendations and a transparent quotation.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-        <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
-          <span>What types of lifts do you install?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 1" x-collapse>
-          <p>We install a wide range of lifts including passenger lifts, goods lifts, platform lifts, car lifts, food lifts, and dumbwaiter lifts. Each installation is tailored to the specific requirements of your building and usage needs.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-        <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
-          <span>How long does a lift modernisation take?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 2" x-collapse>
-          <p>The duration depends on the scope of the modernisation, but most projects are completed within two to four weeks. We work to minimise disruption to your building and its occupants throughout the process.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-        <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
-          <span>Do you offer emergency callout services?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 3" x-collapse>
-          <p>Yes, we provide a 24/7/365 emergency callout service across the North West. Our engineers are on hand to respond quickly to breakdowns and entrapments, ensuring minimal downtime and maximum safety for users.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 4 }" style="--stagger: 4">
-        <button class="faq-trigger" @click="open = open === 4 ? null : 4" :class="{ 'active': open === 4 }">
-          <span>What areas do you cover?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 4" x-collapse>
-          <p>We primarily serve Manchester and the wider North West region, including Stockport, Bolton, Salford, Oldham, and surrounding areas. Contact us to confirm whether we cover your location.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 5 }" style="--stagger: 5">
-        <button class="faq-trigger" @click="open = open === 5 ? null : 5" :class="{ 'active': open === 5 }">
-          <span>Is a free site survey included?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 5" x-collapse>
-          <p>Absolutely. We offer a free, no-obligation site survey for all new enquiries. Our engineers will assess your requirements and provide a detailed report with recommendations and a transparent quotation.</p>
-        </div>
+      <div class="faq-img anim-fade-up">
+        <img src="/lift-accessability.jpg" alt="Accessible lift" />
       </div>
     </div>
   </section>
