@@ -1065,7 +1065,8 @@ ul { list-style: none; }
   /* Sectors: 1 column, sidebar back to 2-col grid, reset main card height */
   .sectors-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .sectors-layout { grid-template-columns: 1fr; }
-  .sector-main { height: 380px; align-self: auto; }
+  .sector-main { height: 380px; align-self: auto; order: 2; }
+  .sector-sidebar { order: 1; }
   .sector-sidebar { grid-template-columns: 1fr 1fr; }
 
   /* CTA partner: single column */
