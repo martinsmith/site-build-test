@@ -3,6 +3,9 @@ import './css/base.css';
 import './css/components.css';
 import './css/home.css';
 
+// ===== FOUC Prevention =====
+document.body.classList.add('loaded');
+
 // ===== Navbar scroll effect =====
 const navbar = document.getElementById('navbar');
 const topbar = document.getElementById('topbar');
