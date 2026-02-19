@@ -393,7 +393,7 @@ ul { list-style: none; }
 
 /* ===== HERO ===== */
 #hero {
-  padding: 200px var(--padding-inline) 120px;
+  padding: 180px var(--padding-inline) 120px;
   text-align: left;
   color: var(--white);
   position: relative;
@@ -453,7 +453,6 @@ ul { list-style: none; }
   align-items: center;
   justify-content: flex-start;
   gap: 16px;
-  margin-bottom: 60px;
 }
 
 .hero-content {
@@ -1066,9 +1065,10 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   :root { --section-pad: 100px 0; }
 
-  /* Hide topbar, shift navbar up */
+  /* Hide topbar, shift navbar up, reduce hero top padding to compensate */
   #topbar { display: none; }
   #navbar { top: 0; }
+  #hero { padding-top: 140px; }
 
   /* Sectors: 1 column, sidebar back to 2-col grid */
   .sectors-header { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -1104,5 +1104,7 @@ ul { list-style: none; }
 
 /* ---- 460px: Hero CTAs stack ---- */
 @media (max-width: 460px) {
-  .hero-ctas { flex-direction: column; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn,
+  .hero-ctas .text-link { text-align: center; }
 }
