@@ -1037,8 +1037,9 @@ ul { list-style: none; }
 
 /* ---- 960px: Sectors sidebar stacks, footer 1+2+1 ---- */
 @media (max-width: 960px) {
-  /* Sectors: keep 2-col layout, but sidebar cards stack */
+  /* Sectors: keep 2-col layout, but sidebar cards stack, main card fixed height */
   .sector-sidebar { grid-template-columns: 1fr; }
+  .sector-main { height: 60%; align-self: start; }
 
   /* Footer: brand row, 2 cols, contact full width */
   .footer-grid {
@@ -1061,9 +1062,10 @@ ul { list-style: none; }
   #navbar { top: 0; }
   #hero { padding-top: 140px; }
 
-  /* Sectors: 1 column, sidebar back to 2-col grid */
+  /* Sectors: 1 column, sidebar back to 2-col grid, reset main card height */
   .sectors-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .sectors-layout { grid-template-columns: 1fr; }
+  .sector-main { height: 380px; align-self: auto; }
   .sector-sidebar { grid-template-columns: 1fr 1fr; }
 
   /* CTA partner: single column */
