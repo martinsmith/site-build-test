@@ -291,9 +291,9 @@ ul { list-style: none; }
   z-index: 101;
 }
 .topbar-container {
-  max-width: var(--container);
+  max-width: calc(var(--container) + var(--padding-inline) * 2);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--padding-inline);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -323,9 +323,9 @@ ul { list-style: none; }
 }
 
 .nav-container {
-  max-width: var(--container);
+  max-width: calc(var(--container) + var(--padding-inline) * 2);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--padding-inline);
   display: flex;
   align-items: center;
   justify-content: space-between;
