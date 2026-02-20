@@ -67,18 +67,23 @@
   color: var(--cobalt);
 }
 
-/* ===== ACCORDION SECTION (no image sidebar) ===== */
+/* ===== ACCORDION SECTION ===== */
 .accordion-section {
   padding: var(--section-pad);
 }
-.accordion-section-intro {
+
+/* Accordion groups — multiple per section */
+.accordion-group + .accordion-group {
+  margin-top: 64px;
+}
+.accordion-group-intro {
   margin-bottom: 40px;
 }
-.accordion-section-intro h2 {
+.accordion-group-intro h2 {
   color: var(--cobalt);
   margin-bottom: 16px;
 }
-.accordion-section-intro p {
+.accordion-group-intro p {
   font-size: 16px;
   color: var(--gray-600);
   line-height: 1.8;

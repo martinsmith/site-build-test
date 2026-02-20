@@ -176,217 +176,224 @@
   </section>
   <div class="section-divider"></div>
 
-  <!-- COMMERCIAL LIFT INSTALLATION — ACCORDION SECTION -->
+  <!-- INSTALLATION & MAINTENANCE — ACCORDION SECTION -->
   <section class="accordion-section content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="accordion-section-intro breakout anim-fade-up">
-      <span class="section-tag-light"><i class="fa-solid fa-wrench"></i> Installation</span>
-      <h2 class="section-heading">Commercial Lift Installation</h2>
-      <p>Installing a commercial lift is a meticulous process that requires careful planning, coordination, and expertise. The comprehensive nature of this process, which includes understanding the timeline and considerations involved, should reassure property managers about the quality of work and the attention to detail involved in the installation of a new lift in their commercial properties.</p>
-    </div>
-    <div class="faq-list breakout" x-data="{ open: null }">
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-        <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
-          <span>Duration of Installation</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 0" x-collapse>
-          <p>A typical commercial lift installation takes six to ten weeks to complete. However, the exact duration may vary depending on various factors, such as the height of the building, accessibility to the installation site, and the complexity of features or functionalities required for the lift.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-        <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
-          <span>Factors Influencing Installation Duration</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 1" x-collapse>
-          <p>Several factors can influence the duration of the installation process:</p>
-          <ul>
-            <li><strong>Height of the Building:</strong> Taller buildings may require more time for installation due to the additional components and structural considerations involved.</li>
-            <li><strong>Accessibility:</strong> Limited access to the installation site can pose challenges and may require additional time for equipment and materials to be transported to the designated location.</li>
-            <li><strong>Complexity of Features/Functionality:</strong> The complexity of the lift's features and functionalities, such as custom cabin designs, unique safety features, or advanced technology integrations, can impact the installation timeline.</li>
-          </ul>
-          <p>The installation process typically follows these key steps:</p>
-          <ul>
-            <li><strong>Site Preparation:</strong> Assessing the installation site, ensuring proper structural support, and preparing for the lift installation.</li>
-            <li><strong>Delivery and Unloading:</strong> The lift components are delivered to the site, unloaded, and made ready for installation.</li>
-            <li><strong>Assembly and Installation:</strong> Skilled technicians, who are a minimum of NVQ 3 qualified, assemble the lift components according to the manufacturer's specifications and install them within the designated shaft space.</li>
-            <li><strong>Wiring and Electrical Connections:</strong> Electrical wiring and connections are installed to power the lift system and integrate any additional features or safety mechanisms.</li>
-            <li><strong>Testing and Commissioning:</strong> Once installed, the lift undergoes thorough testing and commissioning to ensure proper functionality, safety compliance, and smooth operation.</li>
-            <li><strong>Final Inspection and Handover:</strong> A final inspection is conducted to verify that the lift meets all regulatory requirements and safety standards. Upon completion, the lift is handed over to the property manager for regular operation.</li>
-          </ul>
-          <p>Property managers can effectively plan to install a new commercial lift in their buildings by following a checklist or timeline that includes the key steps and their respective durations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
 
-  <!-- COMMERCIAL LIFT MAINTENANCE — ACCORDION SECTION -->
-  <section class="accordion-section content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="accordion-section-intro breakout anim-fade-up">
-      <span class="section-tag-light"><i class="fa-solid fa-gear"></i> Maintenance</span>
-      <h2 class="section-heading">Commercial Lift Maintenance</h2>
-      <p>Regular maintenance is vital for ensuring the safety and reliability of commercial lifts. Property managers can extend the lifespan of their lifts and minimise disruptions to building operations by adhering to a comprehensive maintenance schedule.</p>
-    </div>
-    <div class="faq-list breakout" x-data="{ open: null }">
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-        <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
-          <span>Frequency of Maintenance</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 0" x-collapse>
-          <p>Commercial lifts typically require maintenance every three to six months. The frequency may vary based on the age of the lift, usage patterns, and the manufacturer's recommendations. Regular servicing helps prevent unexpected breakdowns and ensures all safety mechanisms are functioning correctly.</p>
-        </div>
+    <!-- Installation -->
+    <div class="accordion-group breakout">
+      <div class="accordion-group-intro anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-wrench"></i> Installation</span>
+        <h2 class="section-heading">Commercial Lift Installation</h2>
+        <p>Installing a commercial lift is a meticulous process that requires careful planning, coordination, and expertise. The comprehensive nature of this process, which includes understanding the timeline and considerations involved, should reassure property managers about the quality of work and the attention to detail involved in the installation of a new lift in their commercial properties.</p>
       </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-        <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
-          <span>Key Maintenance Tasks</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 1" x-collapse>
-          <p>Essential maintenance tasks include:</p>
-          <ul>
-            <li><strong>Lubrication:</strong> Regularly lubricating moving parts to reduce friction and wear.</li>
-            <li><strong>Safety Checks:</strong> Testing emergency brakes, door sensors, and alarm systems.</li>
-            <li><strong>Electrical Inspection:</strong> Checking wiring, connections, and control panels for signs of damage or deterioration.</li>
-            <li><strong>Component Replacement:</strong> Replacing worn ropes, belts, and seals before they fail.</li>
-            <li><strong>Cleaning:</strong> Keeping the shaft, car top, and pit free from debris and contaminants.</li>
-          </ul>
+      <div class="faq-list" x-data="{ open: null }">
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
+          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+            <span>Duration of Installation</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 0" x-collapse>
+            <p>A typical commercial lift installation takes six to ten weeks to complete. However, the exact duration may vary depending on various factors, such as the height of the building, accessibility to the installation site, and the complexity of features or functionalities required for the lift.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-        <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
-          <span>Importance of Regular Maintenance</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 2" x-collapse>
-          <p>Neglecting regular maintenance can lead to costly repairs, extended downtime, and potential safety hazards. A well-maintained lift operates more efficiently, consumes less energy, and provides a smoother experience for passengers. Proactive maintenance also helps property managers comply with regulatory requirements and avoid penalties.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-        <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
-          <span>Legal Requirements</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 3" x-collapse>
-          <p>Under the Lifting Operations and Lifting Equipment Regulations (LOLER) 1998, all commercial lifts in the UK must undergo a thorough examination by a competent person at least every six months. Property managers are legally responsible for ensuring their lifts are maintained and inspected in accordance with these regulations. Failure to comply can result in enforcement action, fines, or prosecution.</p>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
+          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+            <span>Factors Influencing Installation Duration</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 1" x-collapse>
+            <p>Several factors can influence the duration of the installation process:</p>
+            <ul>
+              <li><strong>Height of the Building:</strong> Taller buildings may require more time for installation due to the additional components and structural considerations involved.</li>
+              <li><strong>Accessibility:</strong> Limited access to the installation site can pose challenges and may require additional time for equipment and materials to be transported to the designated location.</li>
+              <li><strong>Complexity of Features/Functionality:</strong> The complexity of the lift's features and functionalities, such as custom cabin designs, unique safety features, or advanced technology integrations, can impact the installation timeline.</li>
+            </ul>
+            <p>The installation process typically follows these key steps:</p>
+            <ul>
+              <li><strong>Site Preparation:</strong> Assessing the installation site, ensuring proper structural support, and preparing for the lift installation.</li>
+              <li><strong>Delivery and Unloading:</strong> The lift components are delivered to the site, unloaded, and made ready for installation.</li>
+              <li><strong>Assembly and Installation:</strong> Skilled technicians, who are a minimum of NVQ 3 qualified, assemble the lift components according to the manufacturer's specifications and install them within the designated shaft space.</li>
+              <li><strong>Wiring and Electrical Connections:</strong> Electrical wiring and connections are installed to power the lift system and integrate any additional features or safety mechanisms.</li>
+              <li><strong>Testing and Commissioning:</strong> Once installed, the lift undergoes thorough testing and commissioning to ensure proper functionality, safety compliance, and smooth operation.</li>
+              <li><strong>Final Inspection and Handover:</strong> A final inspection is conducted to verify that the lift meets all regulatory requirements and safety standards. Upon completion, the lift is handed over to the property manager for regular operation.</li>
+            </ul>
+            <p>Property managers can effectively plan to install a new commercial lift in their buildings by following a checklist or timeline that includes the key steps and their respective durations.</p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Maintenance -->
+    <div class="accordion-group breakout">
+      <div class="accordion-group-intro anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-gear"></i> Maintenance</span>
+        <h2 class="section-heading">Commercial Lift Maintenance</h2>
+        <p>Regular maintenance is vital for ensuring the safety and reliability of commercial lifts. Property managers can extend the lifespan of their lifts and minimise disruptions to building operations by adhering to a comprehensive maintenance schedule.</p>
+      </div>
+      <div class="faq-list" x-data="{ open: null }">
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
+          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+            <span>Frequency of Maintenance</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 0" x-collapse>
+            <p>Commercial lifts typically require maintenance every three to six months. The frequency may vary based on the age of the lift, usage patterns, and the manufacturer's recommendations. Regular servicing helps prevent unexpected breakdowns and ensures all safety mechanisms are functioning correctly.</p>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
+          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+            <span>Key Maintenance Tasks</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 1" x-collapse>
+            <p>Essential maintenance tasks include:</p>
+            <ul>
+              <li><strong>Lubrication:</strong> Regularly lubricating moving parts to reduce friction and wear.</li>
+              <li><strong>Safety Checks:</strong> Testing emergency brakes, door sensors, and alarm systems.</li>
+              <li><strong>Electrical Inspection:</strong> Checking wiring, connections, and control panels for signs of damage or deterioration.</li>
+              <li><strong>Component Replacement:</strong> Replacing worn ropes, belts, and seals before they fail.</li>
+              <li><strong>Cleaning:</strong> Keeping the shaft, car top, and pit free from debris and contaminants.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
+          <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+            <span>Importance of Regular Maintenance</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 2" x-collapse>
+            <p>Neglecting regular maintenance can lead to costly repairs, extended downtime, and potential safety hazards. A well-maintained lift operates more efficiently, consumes less energy, and provides a smoother experience for passengers. Proactive maintenance also helps property managers comply with regulatory requirements and avoid penalties.</p>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
+          <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+            <span>Legal Requirements</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 3" x-collapse>
+            <p>Under the Lifting Operations and Lifting Equipment Regulations (LOLER) 1998, all commercial lifts in the UK must undergo a thorough examination by a competent person at least every six months. Property managers are legally responsible for ensuring their lifts are maintained and inspected in accordance with these regulations. Failure to comply can result in enforcement action, fines, or prosecution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
-  <div class="section-divider"></div>
 
   <!-- PARALLAX DIVIDER -->
   <div class="parallax-divider" role="presentation">
     <img class="img-cover" src="/hero1.webp" alt="" />
   </div>
 
-  <!-- SAFETY INSPECTIONS — ACCORDION SECTION -->
+  <!-- SAFETY & TROUBLESHOOTING — ACCORDION SECTION -->
   <section class="accordion-section content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="accordion-section-intro breakout anim-fade-up">
-      <span class="section-tag-light"><i class="fa-solid fa-shield-halved"></i> Safety</span>
-      <h2 class="section-heading">Safety Inspections</h2>
-      <p>Safety inspections are a critical component of commercial lift management. Regular and thorough inspections help identify potential hazards, ensure compliance with safety regulations, and protect the wellbeing of all lift users.</p>
-    </div>
-    <div class="faq-list breakout" x-data="{ open: null }">
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-        <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
-          <span>Key Aspects Checked During Safety Inspections</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 0" x-collapse>
-          <p>A thorough safety inspection covers the following areas:</p>
-          <ul>
-            <li><strong>Door mechanisms:</strong> Ensuring doors open and close smoothly and that interlocks are functioning correctly.</li>
-            <li><strong>Safety sensors:</strong> Testing light curtains, proximity sensors, and emergency stop buttons.</li>
-            <li><strong>Braking systems:</strong> Verifying that emergency brakes engage properly under all conditions.</li>
-            <li><strong>Structural integrity:</strong> Checking guide rails, fixings, and shaft walls for damage or wear.</li>
-            <li><strong>Control systems:</strong> Reviewing the operation of the lift controller, indicators, and communication systems.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-        <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
-          <span>Frequency of Safety Inspections</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 1" x-collapse>
-          <p>Under LOLER regulations, commercial lifts must be thoroughly examined at least every six months by a competent person. Additional inspections may be required following any significant modification, incident, or extended period of non-use. Property managers should also conduct routine visual checks between formal inspections.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-        <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
-          <span>Consequences of Neglecting Safety Inspections</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 2" x-collapse>
-          <p>Failing to conduct regular safety inspections can lead to serious consequences, including equipment failure, passenger entrapment, injury, or worse. Property managers may also face legal liability, enforcement action from the Health and Safety Executive (HSE), and significant financial penalties. Maintaining a consistent inspection schedule is both a legal obligation and a moral responsibility.</p>
-        </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-        <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
-          <span>Who Should Perform Safety Inspections</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 3" x-collapse>
-          <p>Safety inspections must be carried out by a competent person — typically a specialist lift engineer or an approved inspection body. These professionals have the training, experience, and equipment necessary to conduct thorough examinations and identify issues that may not be apparent to untrained personnel.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
 
-  <!-- TROUBLESHOOTING AND REPAIRS — ACCORDION SECTION -->
-  <section class="accordion-section content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="accordion-section-intro breakout anim-fade-up">
-      <span class="section-tag-light"><i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting</span>
-      <h2 class="section-heading">Troubleshooting and Repairs</h2>
-      <p>Even with diligent maintenance, commercial lifts may occasionally experience issues. Understanding how to identify problems early and respond appropriately can minimise downtime and protect the safety of building occupants.</p>
+    <!-- Safety Inspections -->
+    <div class="accordion-group breakout">
+      <div class="accordion-group-intro anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-shield-halved"></i> Safety</span>
+        <h2 class="section-heading">Safety Inspections</h2>
+        <p>Safety inspections are a critical component of commercial lift management. Regular and thorough inspections help identify potential hazards, ensure compliance with safety regulations, and protect the wellbeing of all lift users.</p>
+      </div>
+      <div class="faq-list" x-data="{ open: null }">
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
+          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+            <span>Key Aspects Checked During Safety Inspections</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 0" x-collapse>
+            <p>A thorough safety inspection covers the following areas:</p>
+            <ul>
+              <li><strong>Door mechanisms:</strong> Ensuring doors open and close smoothly and that interlocks are functioning correctly.</li>
+              <li><strong>Safety sensors:</strong> Testing light curtains, proximity sensors, and emergency stop buttons.</li>
+              <li><strong>Braking systems:</strong> Verifying that emergency brakes engage properly under all conditions.</li>
+              <li><strong>Structural integrity:</strong> Checking guide rails, fixings, and shaft walls for damage or wear.</li>
+              <li><strong>Control systems:</strong> Reviewing the operation of the lift controller, indicators, and communication systems.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
+          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+            <span>Frequency of Safety Inspections</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 1" x-collapse>
+            <p>Under LOLER regulations, commercial lifts must be thoroughly examined at least every six months by a competent person. Additional inspections may be required following any significant modification, incident, or extended period of non-use. Property managers should also conduct routine visual checks between formal inspections.</p>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
+          <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+            <span>Consequences of Neglecting Safety Inspections</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 2" x-collapse>
+            <p>Failing to conduct regular safety inspections can lead to serious consequences, including equipment failure, passenger entrapment, injury, or worse. Property managers may also face legal liability, enforcement action from the Health and Safety Executive (HSE), and significant financial penalties. Maintaining a consistent inspection schedule is both a legal obligation and a moral responsibility.</p>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
+          <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+            <span>Who Should Perform Safety Inspections</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 3" x-collapse>
+            <p>Safety inspections must be carried out by a competent person — typically a specialist lift engineer or an approved inspection body. These professionals have the training, experience, and equipment necessary to conduct thorough examinations and identify issues that may not be apparent to untrained personnel.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="faq-list breakout" x-data="{ open: null }">
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-        <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
-          <span>Signs of Lift Malfunctions</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 0" x-collapse>
-          <p>Common signs that a commercial lift may be malfunctioning include:</p>
-          <ul>
-            <li><strong>Unusual noises:</strong> Grinding, squealing, or banging sounds during operation may indicate worn components or misalignment.</li>
-            <li><strong>Erratic movement:</strong> Jerky stops, slow response times, or failure to level correctly at floors.</li>
-            <li><strong>Door issues:</strong> Doors not opening or closing fully, or reopening repeatedly without cause.</li>
-            <li><strong>Warning indicators:</strong> Dashboard error codes, alarm signals, or flashing indicators on the control panel.</li>
-          </ul>
-        </div>
+
+    <!-- Troubleshooting & Repairs -->
+    <div class="accordion-group breakout">
+      <div class="accordion-group-intro anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting</span>
+        <h2 class="section-heading">Troubleshooting and Repairs</h2>
+        <p>Even with diligent maintenance, commercial lifts may occasionally experience issues. Understanding how to identify problems early and respond appropriately can minimise downtime and protect the safety of building occupants.</p>
       </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-        <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
-          <span>Response to Lift Malfunctions</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 1" x-collapse>
-          <p>When a lift malfunction is identified, the first step is to take the lift out of service to prevent further use until the issue is resolved. Property managers should contact a qualified lift engineer immediately to diagnose and repair the fault. Clear signage should be placed to inform building occupants, and alternative arrangements (such as directing users to another lift or stairwell) should be communicated promptly.</p>
+      <div class="faq-list" x-data="{ open: null }">
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
+          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+            <span>Signs of Lift Malfunctions</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 0" x-collapse>
+            <p>Common signs that a commercial lift may be malfunctioning include:</p>
+            <ul>
+              <li><strong>Unusual noises:</strong> Grinding, squealing, or banging sounds during operation may indicate worn components or misalignment.</li>
+              <li><strong>Erratic movement:</strong> Jerky stops, slow response times, or failure to level correctly at floors.</li>
+              <li><strong>Door issues:</strong> Doors not opening or closing fully, or reopening repeatedly without cause.</li>
+              <li><strong>Warning indicators:</strong> Dashboard error codes, alarm signals, or flashing indicators on the control panel.</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-        <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
-          <span>Steps in Troubleshooting Lift Issues</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 2" x-collapse>
-          <p>Troubleshooting commercial lift issues typically involves assessing environmental factors, such as temperature fluctuations or humidity levels, which can impact lift performance. Regular inspection of lift components, including doors, safety sensors, and control panels, helps identify potential issues early and prevent costly repairs. Property managers can ensure the continued functionality and safety of commercial lifts in their buildings by prioritising proactive maintenance and prompt response to lift malfunctions.</p>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
+          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+            <span>Response to Lift Malfunctions</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 1" x-collapse>
+            <p>When a lift malfunction is identified, the first step is to take the lift out of service to prevent further use until the issue is resolved. Property managers should contact a qualified lift engineer immediately to diagnose and repair the fault. Clear signage should be placed to inform building occupants, and alternative arrangements (such as directing users to another lift or stairwell) should be communicated promptly.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-        <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
-          <span>Professional Intervention for Repairs</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer" x-show="open === 3" x-collapse>
-          <p>All lift repairs should be carried out by qualified and experienced lift engineers. Attempting to repair lift equipment without proper training and tools can result in further damage, void warranties, and — most importantly — pose serious safety risks. A reputable lift service provider will diagnose the root cause of the issue, carry out repairs using genuine parts, and conduct thorough testing before returning the lift to service.</p>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
+          <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+            <span>Steps in Troubleshooting Lift Issues</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 2" x-collapse>
+            <p>Troubleshooting commercial lift issues typically involves assessing environmental factors, such as temperature fluctuations or humidity levels, which can impact lift performance. Regular inspection of lift components, including doors, safety sensors, and control panels, helps identify potential issues early and prevent costly repairs. Property managers can ensure the continued functionality and safety of commercial lifts in their buildings by prioritising proactive maintenance and prompt response to lift malfunctions.</p>
+          </div>
+        </div>
+        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
+          <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+            <span>Professional Intervention for Repairs</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" x-show="open === 3" x-collapse>
+            <p>All lift repairs should be carried out by qualified and experienced lift engineers. Attempting to repair lift equipment without proper training and tools can result in further damage, void warranties, and — most importantly — pose serious safety risks. A reputable lift service provider will diagnose the root cause of the issue, carry out repairs using genuine parts, and conduct thorough testing before returning the lift to service.</p>
+          </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- ENQUIRY CTA SECTION -->
