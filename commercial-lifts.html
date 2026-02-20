@@ -98,20 +98,17 @@
   </section>
   <div class="section-divider"></div>
 
-  <!-- TYPES OF COMMERCIAL LIFTS — INTRO -->
-  <section class="sector-intro-section content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="breakout anim-fade-up">
-      <span class="section-tag-light"><i class="fa-solid fa-elevator"></i> Lift Types</span>
-      <h2 class="section-heading">Types of Commercial Lifts</h2>
-      <p>Understanding the unique functionalities of each type can help property managers make informed decisions when selecting the most suitable lift for their commercial properties.</p>
-    </div>
-  </section>
-
   <!-- LIFT TYPES — TABBED PANELS -->
   <section id="lift-types" class="content-grid"
     x-data="{ active: 0 }"
     x-intersect.once="$el.classList.add('in-view')"
   >
+    <div class="sc-header breakout anim-fade-up">
+      <span class="section-tag-light"><i class="fa-solid fa-elevator"></i> Lift Types</span>
+      <h2 class="section-heading">Types of Commercial Lifts</h2>
+      <p>Understanding the unique functionalities of each type can help property managers make informed decisions when selecting the most suitable lift for their commercial properties.</p>
+    </div>
+
     <!-- Tab buttons -->
     <div class="sc-tabs breakout anim-fade-up" style="--stagger: 0">
       <button class="sc-tab" :class="{ 'active': active === 0 }" @click="active = 0">

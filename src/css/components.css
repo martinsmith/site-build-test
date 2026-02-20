@@ -588,6 +588,22 @@
 
 /* ===== TABBED PANELS (sc-*) ===== */
 
+/* Header */
+.sc-header {
+  margin-bottom: 48px;
+}
+.sc-header h2 {
+  color: var(--cobalt);
+  max-width: 700px;
+}
+.sc-header p {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.8;
+  max-width: 760px;
+  margin-top: 16px;
+}
+
 /* Tabs row */
 .sc-tabs {
   display: flex;
