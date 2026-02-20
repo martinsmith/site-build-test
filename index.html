@@ -115,7 +115,7 @@
       }
     }"
     x-init="delay = setTimeout(() => start(), 20000)"
-    x-intersect.once="$el.classList.add('in-view')"
+    x-intersect.margin.-250px.once="$el.classList.add('in-view')"
   >
     <div class="sc-header breakout anim-fade-up">
       <span class="section-tag-light"><i class="fa-solid fa-gear"></i> Our Services</span>
@@ -222,14 +222,14 @@
 
   <!-- SECTORS SECTION -->
   <section id="sectors" class="content-grid section-dark">
-    <div class="sectors-header breakout anim-fade-up" x-data x-intersect.once="$el.classList.add('in-view')">
+    <div class="sectors-header breakout anim-fade-up" x-data x-intersect.margin.-250px.once="$el.classList.add('in-view')">
       <div>
         <span class="section-tag-dark"><i class="fa-solid fa-building"></i> Moving People &amp; Product</span>
         <h2 class="section-heading">Maintenance &amp; Support Services across multiple sectors.</h2>
       </div>
       <a href="#" class="btn btn-outline-light"><i class="fa-solid fa-eye"></i> View more <i class="fa-solid fa-arrow-right arrow"></i></a>
     </div>
-    <div class="sectors-layout breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+    <div class="sectors-layout breakout" x-data x-intersect.margin.-250px.once="$el.classList.add('in-view')">
       <div class="sector-main anim-slide-left">
         <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(24.37% 0.0497 252.46) 0%, oklch(31.76% 0.0639 254.75) 50%, oklch(24.37% 0.0497 252.46) 100%);"><img class="img-cover" src="/hero1.webp" alt="Sector Image" /></div>
         <div class="sector-main-content">
@@ -282,7 +282,7 @@
 
   <!-- FAQ SECTION -->
   <section id="faq" class="content-grid">
-    <div class="faq-layout breakout" x-data="{ open: null }" x-intersect.once="$el.classList.add('in-view')">
+    <div class="faq-layout breakout" x-data="{ open: null }" x-intersect.margin.-250px.once="$el.classList.add('in-view')">
       <div class="faq-content">
         <div class="faq-header anim-fade-up">
           <span class="section-tag-light"><i class="fa-solid fa-circle-question"></i> FAQ</span>
@@ -361,7 +361,7 @@
 
   <!-- CTA PARTNER SECTION -->
   <section id="cta-partner" class="content-grid section-dark">
-    <div class="cta-partner-inner breakout" x-data x-intersect.once="$el.classList.add('in-view')">
+    <div class="cta-partner-inner breakout" x-data x-intersect.margin.-250px.once="$el.classList.add('in-view')">
       <div class="cta-partner-img anim-slide-left">
         <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(27.87% 0.0367 249.26) 0%, oklch(35.31% 0.0349 248.85) 100%);"><img class="img-cover" src="/generic1.webp" alt="Partner Image" /></div>
       </div>

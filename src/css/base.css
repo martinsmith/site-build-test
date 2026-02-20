@@ -102,24 +102,24 @@ ul { list-style: none; }
 /* Base states — hidden before entering viewport */
 .anim-fade-up {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
 }
 
 .anim-slide-left {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateX(-50px);
 }
 
 .anim-slide-right {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(50px);
 }
 
 /* Transition timing — applied to all animated elements */
 [class*="anim-"] {
-  transition: opacity 0.7s var(--ease-out-expo),
-              transform 0.7s var(--ease-out-expo);
-  transition-delay: calc(var(--stagger, 0) * 0.12s);
+  transition: opacity 0.9s var(--ease-out-expo),
+              transform 0.9s var(--ease-out-expo);
+  transition-delay: calc(var(--stagger, 0) * 0.15s);
 }
 
 /* Triggered states — when parent or self has .in-view */
