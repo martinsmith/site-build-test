@@ -77,46 +77,11 @@
   max-width: 760px;
 }
 
-/* ===== ZIGZAG LIFT-TYPE BLOCKS ===== */
-.zigzag-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: var(--section-pad);
-}
-.zigzag-block:nth-child(even) .zigzag-text {
-  order: 2;
-}
-.zigzag-block:nth-child(even) .zigzag-media {
-  order: 1;
-}
-
-.zigzag-text h3 {
-  font-size: clamp(24px, 3vw, 32px);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  color: var(--cobalt);
-}
-.zigzag-text p {
-  font-size: 16px;
-  color: var(--gray-600);
-  line-height: 1.8;
-}
-.zigzag-text p + p {
-  margin-top: 16px;
-}
-
-.zigzag-media {
-  border-radius: var(--radius);
-  overflow: hidden;
-  height: 360px;
-}
-
-/* Alternate cream background on even blocks */
-.zigzag-block:nth-child(even) {
+/* ===== LIFT TYPES — TABBED SECTION ===== */
+#lift-types {
   background: var(--cream);
+  padding: var(--section-pad);
+  color: var(--cobalt);
 }
 
 /* ===== ACCORDION SECTION (no image sidebar) ===== */
@@ -169,11 +134,6 @@
   #sector-hero { padding-top: 140px; }
   .sector-hero-content { grid-template-columns: 1fr; }
   .sector-hero-img { height: 300px; }
-
-  .zigzag-block { grid-template-columns: 1fr; }
-  .zigzag-block:nth-child(even) .zigzag-text { order: 0; }
-  .zigzag-block:nth-child(even) .zigzag-media { order: 0; }
-  .zigzag-media { height: 280px; }
 }
 
 /* ---- 460px ---- */

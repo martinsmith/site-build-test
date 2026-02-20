@@ -18,10 +18,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script type="module" crossorigin src="/assets/commercial-lifts-bQxt0f5P.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/components-qdev1hJ8.js">
-  <link rel="stylesheet" crossorigin href="/assets/components-WGMyTo6g.css">
-  <link rel="stylesheet" crossorigin href="/assets/commercial-lifts-BZh98gSC.css">
+  <script type="module" crossorigin src="/assets/commercial-lifts-Re5DevlP.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/components-_UyaqrmX.js">
+  <link rel="stylesheet" crossorigin href="/assets/components-DHo2nXpk.css">
+  <link rel="stylesheet" crossorigin href="/assets/commercial-lifts-BXK5QmZJ.css">
 </head>
 <body>
 
@@ -110,52 +110,73 @@
     </div>
   </section>
 
-  <!-- ZIGZAG LIFT TYPE BLOCKS -->
-  <section class="content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="zigzag-block breakout anim-fade-up">
-      <div class="zigzag-text">
+  <!-- LIFT TYPES — TABBED PANELS -->
+  <section id="lift-types" class="content-grid"
+    x-data="{ active: 0 }"
+    x-intersect.once="$el.classList.add('in-view')"
+  >
+    <!-- Tab buttons -->
+    <div class="sc-tabs breakout anim-fade-up" style="--stagger: 0">
+      <button class="sc-tab" :class="{ 'active': active === 0 }" @click="active = 0">
+        <i class="fa-solid fa-elevator"></i>
+        <span>Traction</span>
+      </button>
+      <button class="sc-tab" :class="{ 'active': active === 1 }" @click="active = 1">
+        <i class="fa-solid fa-arrows-up-down"></i>
+        <span>Low Pit</span>
+      </button>
+      <button class="sc-tab" :class="{ 'active': active === 2 }" @click="active = 2">
+        <i class="fa-solid fa-oil-can"></i>
+        <span>Hydraulic</span>
+      </button>
+      <button class="sc-tab" :class="{ 'active': active === 3 }" @click="active = 3">
+        <i class="fa-solid fa-microchip"></i>
+        <span>MRL</span>
+      </button>
+    </div>
+
+    <!-- Panel 0 — Traction Lifts -->
+    <div class="sc-panel breakout" x-show="active === 0" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 0 }">
+      <div class="sc-panel-img">
+        <img class="img-cover" src="/generic1.webp" alt="Traction lift" />
+      </div>
+      <div class="sc-panel-body">
         <h3>Traction Lifts</h3>
         <p>Traction lifts, renowned for their sturdiness and reliability, are commonly used to transport passengers in commercial settings. Operating on a system of ropes and pulleys, traction lifts offer smooth vertical transportation, making them ideal for high-traffic areas such as office buildings, hotels, and shopping centres.</p>
       </div>
-      <div class="zigzag-media">
-        <img class="img-cover" src="/generic1.webp" alt="Traction lift" />
-      </div>
     </div>
-  </section>
 
-  <section class="content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="zigzag-block breakout anim-fade-up">
-      <div class="zigzag-text">
+    <!-- Panel 1 — Low Pit Lifts -->
+    <div class="sc-panel breakout" x-show="active === 1" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 1 }">
+      <div class="sc-panel-img">
+        <img class="img-cover" src="/generic2.webp" alt="Low pit lift" />
+      </div>
+      <div class="sc-panel-body">
         <h3>Low Pit Lifts</h3>
         <p>Low pit lifts are specifically designed to accommodate buildings with limited space constraints. Featuring a shallow pit requirement compared to traditional lifts, low pit lifts offer an efficient solution for properties where excavation for a deep pit is not feasible. These lifts are often preferred in retrofit projects or buildings with basement levels.</p>
       </div>
-      <div class="zigzag-media">
-        <img class="img-cover" src="/generic2.webp" alt="Low pit lift" />
-      </div>
     </div>
-  </section>
 
-  <section class="content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="zigzag-block breakout anim-fade-up">
-      <div class="zigzag-text">
+    <!-- Panel 2 — Hydraulic Lifts -->
+    <div class="sc-panel breakout" x-show="active === 2" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 2 }">
+      <div class="sc-panel-img">
+        <img class="img-cover" src="/hero1.webp" alt="Hydraulic lift" />
+      </div>
+      <div class="sc-panel-body">
         <h3>Hydraulic Lifts</h3>
         <p>Hydraulic lifts are prized for their robustness and efficiency. They use hydraulic fluid to power the lifting mechanism and are known for their smooth ride quality and minimal maintenance requirements. Hydraulic lifts are commonly installed in commercial properties where reliability and energy efficiency are paramount.</p>
       </div>
-      <div class="zigzag-media">
-        <img class="img-cover" src="/hero1.webp" alt="Hydraulic lift" />
-      </div>
     </div>
-  </section>
 
-  <section class="content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
-    <div class="zigzag-block breakout anim-fade-up">
-      <div class="zigzag-text">
+    <!-- Panel 3 — Machine Room-Less (MRL) Lifts -->
+    <div class="sc-panel breakout" x-show="active === 3" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 3 }">
+      <div class="sc-panel-img">
+        <img class="img-cover" src="/maintenance1.webp" alt="Machine room-less lift" />
+      </div>
+      <div class="sc-panel-body">
         <h3>Machine Room-Less (MRL) Lifts</h3>
         <p>Machine room-less (MRL) lifts are revolutionising the commercial lift industry with their space-saving design and modern aesthetics. Unlike traditional lifts that require a separate machine room for housing the lift machinery, MRL lifts integrate the equipment within the shaft structure, maximising usable space in the building. This innovative design makes MRL lifts an attractive choice for architects and property developers seeking sleek, contemporary lift solutions for their commercial projects.</p>
         <p>Understanding the distinct characteristics and advantages of each type of commercial lift is crucial for property managers looking to enhance vertical transportation within their buildings. Businesses can ensure efficient and reliable mobility for their tenants and visitors by choosing the right lift type.</p>
-      </div>
-      <div class="zigzag-media">
-        <img class="img-cover" src="/maintenance1.webp" alt="Machine room-less lift" />
       </div>
     </div>
   </section>
