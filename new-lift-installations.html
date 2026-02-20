@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Lift Installations | Altius Lifts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <meta name="view-transition" content="same-origin">
+
+  <style>
+    body { visibility: hidden; }
+    body.loaded { visibility: visible; }
+  </style>
+
+  <script type="module" src="/src/service-main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div id="topbar" class="content-grid">
+    <div class="topbar-container breakout">
+      <div class="topbar-left">
+        <span>follow us</span>
+        <div class="topbar-socials">
+          <a href="#">in</a>
+          <a href="#">fb</a>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <span>📞 (888) 456 7890</span>
+        <span>✉️ info@example.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="content-grid">
+    <div class="nav-container breakout">
+      <a href="/" class="logo"><img src="/altius-lifts.svg" alt="Altius Lifts" class="logo-img" /></a>
+      <div class="nav-links">
+        <div class="nav-item has-dropdown">
+          <a href="/">Home <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#">About <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#">Pages <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#">Blog <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <a href="#" class="nav-item">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-outline">get started</a>
+        <a href="#" class="btn btn-primary">get started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SERVICE HERO -->
+  <section id="service-hero" class="content-grid">
+    <div class="service-hero-content breakout">
+      <div class="service-hero-text">
+        <span class="section-tag-dark hero-anim" style="--delay: 0.15">
+          <i class="fa-solid fa-elevator"></i>
+          <span>Our Services</span>
+        </span>
+        <h1 class="service-hero-title hero-anim" style="--delay: 0.3">New Lift Installations</h1>
+        <p class="service-hero-subtitle hero-anim" style="--delay: 0.45">Very often, lift modernisation can be a better solution than installing a completely new lift. However, there are occasions when a new lift installation is needed, and that's where we come in.</p>
+        <div class="service-hero-ctas hero-anim" style="--delay: 0.6">
+          <a href="#enquiry" class="btn btn-primary">Make an Enquiry <i class="fa-solid fa-arrow-right arrow"></i></a>
+          <a href="/" class="btn btn-outline-light">Back to Home <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="service-hero-img hero-anim" style="--delay: 0.5">
+        <img class="img-cover" src="/hero1.webp" alt="New lift installation" />
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- CONTENT SECTION -->
+  <section id="service-content" class="content-grid" x-data x-intersect.once="$el.classList.add('in-view')">
+    <div class="service-intro breakout anim-fade-up">
+      <span class="section-tag-light"><i class="fa-solid fa-elevator"></i> Lift Installation</span>
+      <h2 class="section-heading">A range of lifts to suit your needs</h2>
+    </div>
+    <div class="service-body breakout anim-fade-up" style="--stagger: 1">
+      <div class="service-body-text">
+        <p>When installing a new lift, we ensure that it is completed to the agreed specification, is fully compliant with The Lift Regulations and all relevant Health &amp; Safety, and that it is designed to fit the right purpose. Our installation process is smooth and professional, keeping you well informed throughout to ensure we meet and exceed your expectations.</p>
+        <p>We specialise in lift installation for the following lift types:</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Passenger lifts</li>
+          <li><i class="fa-solid fa-check"></i> Goods lifts</li>
+          <li><i class="fa-solid fa-check"></i> Platform lifts and access lifts</li>
+          <li><i class="fa-solid fa-check"></i> Car lifts</li>
+          <li><i class="fa-solid fa-check"></i> Dumbwaiter lifts</li>
+        </ul>
+        <p>Whatever your lift needs, you can rest assured knowing our team of experts are on hand to find the perfect solution for you.</p>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- FEATURE SECTION -->
+  <section id="service-feature" class="content-grid section-dark" x-data x-intersect.once="$el.classList.add('in-view')">
+    <div class="service-feature-inner breakout">
+      <div class="service-feature-text anim-slide-left">
+        <span class="section-tag-dark"><i class="fa-solid fa-flag"></i> UK Sourced</span>
+        <h2 class="section-heading">Using UK suppliers for your new lift installation</h2>
+        <p>Wherever possible, we strive to source all parts from UK suppliers for your lift installation. This enables us to:</p>
+        <ul class="check-list check-list-light">
+          <li><i class="fa-solid fa-check"></i> Gain rapid access to parts</li>
+          <li><i class="fa-solid fa-check"></i> Reduce lead times</li>
+          <li><i class="fa-solid fa-check"></i> Ensure outstanding quality control</li>
+          <li><i class="fa-solid fa-check"></i> Reduce our carbon footprint</li>
+          <li><i class="fa-solid fa-check"></i> Support the UK economy</li>
+        </ul>
+      </div>
+      <div class="service-feature-img anim-slide-right">
+        <img class="img-cover" src="/generic2.webp" alt="UK lift suppliers" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX DIVIDER -->
+  <div class="parallax-divider" role="presentation">
+    <img class="img-cover" src="/hero1.webp" alt="" />
+  </div>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="content-grid">
+    <div class="faq-layout breakout" x-data="{ open: null }" x-intersect.once="$el.classList.add('in-view')">
+      <div class="faq-content">
+        <div class="faq-header anim-fade-up">
+          <span class="section-tag-light"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+          <h2 class="section-heading">Frequently Asked Questions</h2>
+          <p>Everything you need to know about new lift installations.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
+            <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+              <span>How long does a new lift installation take?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 0" x-collapse>
+              <p>Installation timelines vary depending on the lift type and building requirements, but a typical installation takes between 6 to 12 weeks from commencement on site. We'll provide a detailed project plan during the planning stage.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
+            <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+              <span>What types of buildings can have a lift installed?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 1" x-collapse>
+              <p>We install lifts in all types of buildings including commercial offices, residential properties, retail spaces, healthcare facilities, and educational institutions. Our team will conduct a site survey to determine the best solution for your building.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
+            <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+              <span>Do you handle all building regulations and compliance?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 2" x-collapse>
+              <p>Yes, we ensure all installations are fully compliant with The Lift Regulations and relevant Health &amp; Safety requirements. We handle all necessary certifications and documentation on your behalf.</p>
+            </div>
+          </div>
+          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
+            <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+              <span>Is a free site survey included?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" x-show="open === 3" x-collapse>
+              <p>Absolutely. We offer a free, no-obligation site survey for all new enquiries. Our engineers will assess your requirements and provide a detailed report with recommendations and a transparent quotation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faq-img anim-fade-up">
+        <img class="img-cover" src="/lift-accessability.jpg" alt="Accessible lift" />
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- ENQUIRY CTA SECTION -->
+  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.once="$el.classList.add('in-view')">
+    <div class="enquiry-inner breakout anim-fade-up">
+      <span class="section-tag-dark"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+      <h2 class="section-heading">Ready to discuss your lift installation?</h2>
+      <p>Whether you're planning a new build or upgrading an existing property, our team is ready to help. Get in touch for a free, no-obligation site survey and quotation.</p>
+      <div class="enquiry-ctas">
+        <a href="#" class="btn btn-primary">Make an Enquiry <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="tel:01613994956" class="btn btn-outline-light"><i class="fa-solid fa-phone"></i> 0161 399 4956</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="content-grid">
+    <div class="footer-grid breakout">
+      <div class="footer-brand">
+        <a href="/"><img src="/altius-lifts.svg" alt="Altius Lifts" class="logo-img" /></a>
+        <p>Dependable lift installation, maintenance, modernisation and repair services across the North West.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#">Why Choose Us?</a>
+          <a href="#">Our Services</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <div class="footer-hours">
+          <div class="hours-row"><span>Monday:</span><span>00:00 - 00:00</span></div>
+          <div class="hours-row"><span>Tuesday:</span><span>00:00 - 00:00</span></div>
+          <div class="hours-row"><span>Wednesday:</span><span>00:00 - 00:00</span></div>
+          <div class="hours-row"><span>Thursday:</span><span>00:00 - 00:00</span></div>
+          <div class="hours-row"><span>Friday:</span><span>00:00 - 00:00</span></div>
+          <div class="hours-row"><span>Saturday:</span><span>00:00 - 00:00</span></div>
+          <div class="hours-row"><span>Sunday:</span><span>00:00 - 00:00</span></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Suite 3, Bowden Hall, Bowden Lane, Marple, Stockport, England, SK6 6ND</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>0161 399 4956</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="#">Click here to email us</a>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom breakout">
+      <p>&copy; 2026 Altius Lifts. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() { document.body.classList.add('loaded'); }, 50);
+  });
+  setTimeout(function() { document.body.classList.add('loaded'); }, 500);
+</script>
+
+</body>
+</html>
