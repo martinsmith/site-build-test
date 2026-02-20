@@ -174,47 +174,6 @@
   height: 420px;
 }
 
-/* ===== PARALLAX DIVIDER ===== */
-.parallax-divider {
-  height: clamp(250px, 35vw, 400px);
-  overflow: hidden;
-  position: relative;
-}
-.parallax-divider img {
-  position: absolute;
-  inset: -20% 0;
-  width: 100%;
-  height: 140%;
-  object-fit: cover;
-  filter: grayscale(1);
-}
-
-/* ===== ENQUIRY CTA SECTION ===== */
-#enquiry {
-  padding: var(--section-pad);
-  text-align: center;
-}
-
-.enquiry-inner {
-  max-width: 680px;
-  margin: 0 auto;
-}
-.enquiry-inner h2 {
-  margin-bottom: 16px;
-}
-.enquiry-inner > p {
-  font-size: 16px;
-  color: var(--white-55);
-  line-height: 1.7;
-  margin-bottom: 36px;
-}
-
-.enquiry-ctas {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
 /* ===== SERVICE PAGE RESPONSIVE ===== */
 
 /* ---- 768px ---- */
@@ -233,8 +192,5 @@
   .service-list { grid-template-columns: 1fr; }
   .service-hero-ctas { flex-direction: column; align-items: stretch; }
   .service-hero-ctas .btn { text-align: center; }
-
-  .enquiry-ctas { flex-direction: column; align-items: stretch; }
-  .enquiry-ctas .btn { text-align: center; }
 }
 

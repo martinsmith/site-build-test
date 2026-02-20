@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         'new-lift-installations': resolve(__dirname, 'new-lift-installations.html'),
+        'commercial-lifts': resolve(__dirname, 'commercial-lifts.html'),
       },
     },
   },
