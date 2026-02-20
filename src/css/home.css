@@ -314,7 +314,6 @@
 /* ===== FAQ SECTION (homepage overrides) ===== */
 #faq {
   background: var(--cream);
-  padding: var(--section-pad);
 }
 
 /* ===== CTA PARTNER SECTION ===== */

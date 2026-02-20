@@ -22,3 +22,10 @@ window.addEventListener('scroll', () => {
 
 if (topbar) topbar.style.transition = 'transform 0.3s ease';
 
+// ===== Back to top =====
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
