@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sectors Supported | Altius Lifts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <meta name="view-transition" content="same-origin">
+
+  <style>
+    body { visibility: hidden; }
+    body.loaded { visibility: visible; }
+  </style>
+
+  <script type="module" src="/src/sectors-main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+  <!-- @include header -->
+
+  <!-- HERO -->
+  <section id="sectors-hero" class="content-grid">
+    <div class="sectors-hero-content breakout hero-anim" style="--delay: 0.15">
+      <span class="section-tag-dark hero-anim" style="--delay: 0.15">
+        <i class="fa-solid fa-building"></i>
+        <span>Sectors Supported</span>
+      </span>
+      <h1 class="sectors-hero-title hero-anim" style="--delay: 0.3">Lift Solutions for Every Environment</h1>
+      <p class="sectors-hero-subtitle hero-anim" style="--delay: 0.45">From commercial high-rises to residential developments, we deliver tailored lift installation, maintenance and repair services across a wide range of sectors.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- SECTOR 1: Commercial (text left / image right) -->
+  <section class="sec-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sec-card-inner breakout">
+      <div class="sec-card-text anim-fade-up">
+        <span class="section-tag-dark"><i class="fa-solid fa-building"></i> Commercial</span>
+        <h2 class="sec-card-title">Commercial Lifts</h2>
+        <p class="sec-card-desc">Office buildings, corporate headquarters and mixed-use developments all demand reliable vertical transportation. We install and maintain lifts that keep commercial environments running smoothly, safely and efficiently.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Office towers &amp; business parks</li>
+          <li><i class="fa-solid fa-check"></i> Multi-storey car parks</li>
+          <li><i class="fa-solid fa-check"></i> Mixed-use developments</li>
+        </ul>
+        <div class="sec-card-cta">
+          <a href="/commercial-lifts.html" class="btn btn-primary"><i class="fa-solid fa-building"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="sec-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/hero1.webp" alt="Commercial lift installation" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 2: Retail (tinted, reversed — image left / text right) -->
+  <section class="sec-card sec-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sec-card-inner breakout">
+      <div class="sec-card-text anim-fade-up">
+        <span class="section-tag-dark"><i class="fa-solid fa-store"></i> Retail</span>
+        <h2 class="sec-card-title">Retail Lifts</h2>
+        <p class="sec-card-desc">Shopping centres, department stores and retail parks rely on lifts to move customers between floors. We ensure your lifts meet the high demands of busy retail environments with minimal downtime and maximum safety.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Shopping centres &amp; malls</li>
+          <li><i class="fa-solid fa-check"></i> Department stores</li>
+          <li><i class="fa-solid fa-check"></i> Retail parks &amp; high-street premises</li>
+        </ul>
+        <div class="sec-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-store"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="sec-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/generic2.webp" alt="Retail lift services" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 3: Residential (text left / image right) -->
+  <section class="sec-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sec-card-inner breakout">
+      <div class="sec-card-text anim-fade-up">
+        <span class="section-tag-dark"><i class="fa-solid fa-house"></i> Residential</span>
+        <h2 class="sec-card-title">Residential Lifts</h2>
+        <p class="sec-card-desc">From luxury apartment blocks to social housing developments, we provide lift solutions that combine reliability with quiet operation. Our residential services are designed around the comfort and safety of occupants.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Apartment buildings &amp; tower blocks</li>
+          <li><i class="fa-solid fa-check"></i> Sheltered housing &amp; care homes</li>
+          <li><i class="fa-solid fa-check"></i> Private residential lifts</li>
+        </ul>
+        <div class="sec-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-house"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="sec-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/hero1.webp" alt="Residential lift installation" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTOR 4: Academic (tinted, reversed — image left / text right) -->
+  <section class="sec-card sec-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sec-card-inner breakout">
+      <div class="sec-card-text anim-fade-up">
+        <span class="section-tag-dark"><i class="fa-solid fa-graduation-cap"></i> Academic</span>
+        <h2 class="sec-card-title">Academic Lifts</h2>
+        <p class="sec-card-desc">Universities, colleges and schools need lifts that can handle high volumes of daily traffic while meeting strict accessibility requirements. We deliver robust solutions designed for the demands of educational environments.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Universities &amp; colleges</li>
+          <li><i class="fa-solid fa-check"></i> Schools &amp; academies</li>
+          <li><i class="fa-solid fa-check"></i> Libraries &amp; research facilities</li>
+        </ul>
+        <div class="sec-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-graduation-cap"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="sec-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/generic2.webp" alt="Academic lift services" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 5: Healthcare (text left / image right) -->
+  <section class="sec-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sec-card-inner breakout">
+      <div class="sec-card-text anim-fade-up">
+        <span class="section-tag-dark"><i class="fa-solid fa-hospital"></i> Healthcare</span>
+        <h2 class="sec-card-title">Healthcare Lifts</h2>
+        <p class="sec-card-desc">Hospitals, clinics and care facilities require lifts that meet stringent safety and hygiene standards. Our healthcare lift solutions ensure reliable patient and equipment transportation around the clock.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Hospitals &amp; clinics</li>
+          <li><i class="fa-solid fa-check"></i> Care homes &amp; assisted living</li>
+          <li><i class="fa-solid fa-check"></i> Bed &amp; stretcher lifts</li>
+        </ul>
+        <div class="sec-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-hospital"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="sec-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/hero1.webp" alt="Healthcare lift installation" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 6: Leisure / Hospitality (tinted, reversed — image left / text right) -->
+  <section class="sec-card sec-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sec-card-inner breakout">
+      <div class="sec-card-text anim-fade-up">
+        <span class="section-tag-dark"><i class="fa-solid fa-hotel"></i> Leisure / Hospitality</span>
+        <h2 class="sec-card-title">Leisure &amp; Hospitality Lifts</h2>
+        <p class="sec-card-desc">Hotels, leisure centres and entertainment venues need lifts that combine reliability with a premium passenger experience. We install and maintain lifts that reflect the quality of your hospitality brand.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Hotels &amp; resorts</li>
+          <li><i class="fa-solid fa-check"></i> Leisure centres &amp; gyms</li>
+          <li><i class="fa-solid fa-check"></i> Theatres, cinemas &amp; venues</li>
+        </ul>
+        <div class="sec-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-hotel"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="sec-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/generic2.webp" alt="Hospitality lift services" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX DIVIDER -->
+  <div class="parallax-divider" role="presentation">
+    <img class="img-cover" src="/hero1.webp" alt="" />
+  </div>
+
+  <!-- ENQUIRY CTA SECTION -->
+  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="enquiry-inner breakout">
+      <span class="section-tag-dark anim-fade-up" style="--stagger: 0"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+      <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your lift requirements?</h2>
+      <p class="anim-fade-up" style="--stagger: 2">Whatever your sector, our team of experts is here to help. Get in touch today for a free, no-obligation consultation and quotation.</p>
+      <div class="enquiry-ctas anim-fade-up" style="--stagger: 3">
+        <a href="/contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Make an enquiry <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="tel:01613994956" class="btn btn-outline-light"><i class="fa-solid fa-phone"></i> 0161 399 4956 <i class="fa-solid fa-arrow-right arrow"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- @include footer -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() { document.body.classList.add('loaded'); }, 50);
+  });
+  setTimeout(function() { document.body.classList.add('loaded'); }, 500);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* ===== SECTORS HERO ===== */
+#sectors-hero {
+  padding: 180px 0 100px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#sectors-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/hero1.webp') center / cover no-repeat;
+  filter: grayscale(1);
+  z-index: 0;
+  pointer-events: none;
+}
+#sectors-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, oklch(from var(--overlay) l c h / 0.80) 0%, oklch(from var(--overlay) l c h / 0.60) 50%, oklch(from var(--overlay) l c h / 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sectors-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.sectors-hero-title {
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.sectors-hero-subtitle {
+  font-size: 17px;
+  color: var(--white-60);
+  max-width: 620px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== SECTOR SHOWCASE CARDS ===== */
+.sec-card {
+  padding: var(--section-pad);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--dark-bg-deep), var(--dark-bg));
+  color: var(--white);
+}
+
+/* Accent left border highlight */
+.sec-card::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  width: 4px;
+  background: var(--accent);
+  border-radius: 0 4px 4px 0;
+}
+
+.sec-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Reversed layout: image left, text right */
+.sec-card--reversed .sec-card-inner {
+  direction: rtl;
+}
+.sec-card--reversed .sec-card-inner > * {
+  direction: ltr;
+}
+.sec-card--reversed::before {
+  left: auto;
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/* Centered divider between cards */
+.sec-card + .sec-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: var(--white-60);
+}
+
+/* Text column */
+.sec-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.sec-card-title {
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+.sec-card-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: var(--white-60);
+}
+
+/* Check-list on dark background */
+.sec-card .check-list li {
+  color: var(--white-75);
+  border-bottom-color: var(--white-10);
+}
+.sec-card .check-list li i {
+  color: var(--accent);
+}
+
+.sec-card-cta {
+  margin-top: 32px;
+}
+
+/* Image column */
+.sec-card-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 440px;
+}
+
+/* ===== SECTORS PAGE RESPONSIVE ===== */
+
+/* ---- 768px ---- */
+@media (max-width: 768px) {
+  #sectors-hero { padding-top: 140px; }
+
+  .sec-card-inner { grid-template-columns: 1fr; }
+  .sec-card--reversed .sec-card-inner { direction: ltr; }
+  .sec-card-img { height: 300px; }
+  .sec-card::before { top: 0; bottom: auto; left: 0; right: 0; width: auto; height: 4px; border-radius: 0; }
+  .sec-card--reversed::before { top: auto; bottom: 0; left: 0; right: 0; width: auto; height: 4px; border-radius: 0; }
+}
+

@@ -29,6 +29,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         'why-choose-us': resolve(__dirname, 'why-choose-us.html'),
         services: resolve(__dirname, 'services.html'),
+        sectors: resolve(__dirname, 'sectors.html'),
       },
     },
   },
