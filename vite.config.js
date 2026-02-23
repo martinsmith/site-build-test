@@ -20,6 +20,7 @@ function htmlPartials() {
 
 export default defineConfig({
   plugins: [htmlPartials()],
+  base: './',
   build: {
     rollupOptions: {
       input: {
