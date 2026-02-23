@@ -161,6 +161,7 @@ ul { list-style: none; }
 .section-tag-dark {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 8px;
   border-radius: var(--radius-sm);
   padding: 8px 20px;
