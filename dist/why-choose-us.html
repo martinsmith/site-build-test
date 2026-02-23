@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Altius Lifts</title>
+  <title>Why Choose Us | Altius Lifts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -18,10 +18,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script type="module" crossorigin src="/assets/contact-C9d7m9Qq.js"></script>
+  <script type="module" crossorigin src="/assets/why-choose-us-CfKVHpTQ.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/components-D2avpNky.js">
   <link rel="stylesheet" crossorigin href="/assets/components-DUX956ud.css">
-  <link rel="stylesheet" crossorigin href="/assets/contact-B4lOF_vi.css">
+  <link rel="stylesheet" crossorigin href="/assets/why-choose-us-DJEK9wwB.css">
 </head>
 <body>
 
@@ -82,111 +82,119 @@
 
 
 
-  <!-- CONTACT HERO -->
-  <section id="contact-hero" class="content-grid">
-    <div class="contact-hero-content breakout hero-anim" style="--delay: 0.15">
+  <!-- HERO -->
+  <section id="wcu-hero" class="content-grid">
+    <div class="wcu-hero-content breakout hero-anim" style="--delay: 0.15">
       <span class="section-tag-dark hero-anim" style="--delay: 0.15">
-        <i class="fa-solid fa-envelope"></i>
-        <span>Contact Us</span>
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Why Choose Us</span>
       </span>
-      <h1 class="contact-hero-title hero-anim" style="--delay: 0.3">Get In Touch</h1>
-      <p class="contact-hero-subtitle hero-anim" style="--delay: 0.45">We'd love to hear from you. Whether you have a question about our services, need a quote, or just want to chat — our team is ready to help.</p>
+      <h1 class="wcu-hero-title hero-anim" style="--delay: 0.3">Achieve Total Peace of Mind</h1>
+      <p class="wcu-hero-subtitle hero-anim" style="--delay: 0.45">At Caledonian Lifts Manchester we are a leading provider of lift maintenance and installation services, with years of experience in the industry. We specialise in servicing and maintaining all types of lifts including passenger lifts, goods lifts, and platform lifts.</p>
     </div>
   </section>
   <div class="section-divider"></div>
 
-  <!-- CONTACT FORM SECTION -->
-  <section id="contact-form-section" class="content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
-    <div class="contact-form-layout breakout">
-      <div class="contact-form-intro anim-fade-up">
-        <span class="section-tag-light"><i class="fa-solid fa-paper-plane"></i> Send Us a Message</span>
-        <h2 class="section-heading">How can we help?</h2>
-        <p>Fill in the form and a member of our team will get back to you as soon as possible. Alternatively, you can call us directly or use the details below to find us.</p>
+  <!-- CONTENT BLOCK 1: Accredited & Compliant -->
+  <section class="wcu-block content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="wcu-block-inner breakout">
+      <div class="wcu-block-text anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-certificate"></i> Trusted Expertise</span>
+        <h2 class="section-heading">Why Choose Altius Lifts?</h2>
+        <p>Our team of certified technicians and engineers are equipped with the latest tools and technology to ensure the safety, reliability and efficiency of your lifts. Whether you need a routine maintenance check or a full modernisation project, we are available 24/7 to provide a fast and efficient service. With us, you can have peace of mind knowing that your lift is in good hands. Trust us to keep your lifts running smoothly.</p>
+        <h3>Accredited &amp; Fully Compliant</h3>
+        <p>We ensure all lift repairs, maintenance, modernisations, and installs are compliant with the latest Health &amp; Safety regulations and The Lift Regulations &mdash; as well as all relevant standards and codes of practice. These include, but not limited to:</p>
+        <div class="accreditation-list">
+          <span class="accreditation-badge"><i class="fa-solid fa-circle-check"></i> Alcumus</span>
+          <span class="accreditation-badge"><i class="fa-solid fa-circle-check"></i> Constructionline</span>
+          <span class="accreditation-badge"><i class="fa-solid fa-circle-check"></i> SafeContractor</span>
+          <span class="accreditation-badge"><i class="fa-solid fa-circle-check"></i> ISO9001</span>
+          <span class="accreditation-badge"><i class="fa-solid fa-circle-check"></i> ISO45001</span>
+        </div>
       </div>
-      <form class="contact-form anim-fade-up" style="--stagger: 1" action="#" method="post">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName">First Name *</label>
-            <input type="text" id="firstName" name="firstName" placeholder="John" required />
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name *</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="0161 000 0000" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject *</label>
-          <select id="subject" name="subject" required>
-            <option value="" disabled selected>Please select a subject...</option>
-            <option value="new-installation">New Lift Installation</option>
-            <option value="maintenance">Maintenance &amp; Servicing</option>
-            <option value="repair">Breakdown &amp; Repairs</option>
-            <option value="modernisation">Lift Modernisation</option>
-            <option value="quote">Request a Quote</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Your Message *</label>
-          <textarea id="message" name="message" placeholder="Tell us about your requirements..." required></textarea>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message <i class="fa-solid fa-arrow-right arrow"></i></button>
-        </div>
-      </form>
+      <div class="wcu-block-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/hero1.webp" alt="Accredited lift engineers" />
+      </div>
     </div>
   </section>
   <div class="section-divider"></div>
 
-  <!-- LOCATION SECTION -->
-  <section id="location" class="content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
-    <div class="location-layout breakout">
-      <div class="location-info anim-fade-up">
-        <span class="section-tag-light"><i class="fa-solid fa-location-dot"></i> Our Location</span>
-        <h2 class="section-heading">Get in Touch</h2>
-        <p>Get in touch and find out why Altius Lifts are the best choice for all your lift requirements. Our friendly and expert team are available 24/7 to answer any queries you may have.</p>
-        <div class="location-details">
-          <div class="location-detail anim-fade-up" style="--stagger: 1">
-            <span class="location-detail-icon"><i class="fa-solid fa-phone"></i></span>
-            <div class="location-detail-text">
-              <strong>Telephone</strong>
-              <a href="tel:01613994956">0161 399 4956</a>
-            </div>
-          </div>
-          <div class="location-detail anim-fade-up" style="--stagger: 2">
-            <span class="location-detail-icon"><i class="fa-solid fa-envelope"></i></span>
-            <div class="location-detail-text">
-              <strong>Email</strong>
-              <a href="#">Click to Email us...</a>
-            </div>
-          </div>
-          <div class="location-detail anim-fade-up" style="--stagger: 3">
-            <span class="location-detail-icon"><i class="fa-solid fa-location-dot"></i></span>
-            <div class="location-detail-text">
-              <strong>Address</strong>
-              <span>Altius Lifts Ltd, Suite 3, Bowden Hall, Bowden Lane, Marple, Stockport, England, SK6 6ND</span>
-            </div>
-          </div>
+  <!-- CONTENT BLOCK 2: Planned Maintenance -->
+  <section class="wcu-block wcu-block--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="wcu-block-inner breakout">
+      <div class="wcu-block-text anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-clipboard-check"></i> Maintenance Contracts</span>
+        <h2 class="section-heading">Planned Maintenance Contracts</h2>
+        <p>For on-going safety purposes and total peace of mind, we offer 2 planned maintenance contracts &mdash; Basic or Comprehensive. We provide a common sense contract approach with clear conditions and flexibility, making our lift maintenance solutions both hassle free and cost effective. Trust us to keep your lifts running smoothly.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Preventative maintenance</li>
+          <li><i class="fa-solid fa-check"></i> Compliance with Health &amp; Safety requirements</li>
+          <li><i class="fa-solid fa-check"></i> Advice on and planning for future repairs</li>
+          <li><i class="fa-solid fa-check"></i> UK stock for replacement parts</li>
+        </ul>
+      </div>
+      <div class="wcu-block-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/generic2.webp" alt="Planned lift maintenance" />
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- SECTORS SECTION -->
+  <section id="sectors" class="content-grid section-dark">
+    <div class="sectors-header breakout anim-fade-up" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+      <div>
+        <span class="section-tag-dark"><i class="fa-solid fa-building"></i> Moving People &amp; Product</span>
+        <h2 class="section-heading">Maintenance &amp; Support Services across multiple sectors.</h2>
+      </div>
+      <a href="#" class="btn btn-outline-light"><i class="fa-solid fa-eye"></i> View more <i class="fa-solid fa-arrow-right arrow"></i></a>
+    </div>
+    <div class="sectors-layout breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+      <div class="sector-main anim-slide-left">
+        <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(24.37% 0.0497 252.46) 0%, oklch(31.76% 0.0639 254.75) 50%, oklch(24.37% 0.0497 252.46) 100%);"><img class="img-cover" src="/hero1.webp" alt="Sector Image" /></div>
+        <div class="sector-main-content">
+          <h3>24/7/365 Callout Service</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          <a href="#" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
         </div>
       </div>
-      <div class="location-map anim-fade-up" style="--stagger: 2">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2380!2d-2.073162203382408!3d53.39897516902886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDIzJzU2LjMiTiAywrAwNCcyMy40Ilc!5e0!3m2!1sen!2suk!4v1"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Altius Lifts location map">
-        </iframe>
+      <div class="sector-sidebar">
+        <div class="sector-card anim-fade-up" style="--stagger: 0">
+          <div class="sector-num">01</div>
+          <h4>Commercial</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+          <a href="/commercial-lifts.html" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+        <div class="sector-card anim-fade-up" style="--stagger: 1">
+          <div class="sector-num">02</div>
+          <h4>Residential</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+          <a href="#" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+        <div class="sector-card anim-fade-up" style="--stagger: 2">
+          <div class="sector-num">03</div>
+          <h4>Retail</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+          <a href="#" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+        <div class="sector-card anim-fade-up" style="--stagger: 3">
+          <div class="sector-num">04</div>
+          <h4>Hospitality</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+          <a href="#" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+        <div class="sector-card anim-fade-up" style="--stagger: 4">
+          <div class="sector-num">05</div>
+          <h4>Academic</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+          <a href="#" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+        <div class="sector-card anim-fade-up" style="--stagger: 5">
+          <div class="sector-num">06</div>
+          <h4>Healthcare</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+          <a href="#" class="view-more arrow-link">More Info <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
       </div>
     </div>
   </section>
@@ -203,7 +211,7 @@
       <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your lift requirements?</h2>
       <p class="anim-fade-up" style="--stagger: 2">Whatever your lift needs, our team of experts is here to help. Get in touch today for a free, no-obligation consultation and quotation.</p>
       <div class="enquiry-ctas anim-fade-up" style="--stagger: 3">
-        <a href="#contact-form-section" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Make an enquiry <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="/contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Make an enquiry <i class="fa-solid fa-arrow-right arrow"></i></a>
         <a href="tel:01613994956" class="btn btn-outline-light"><i class="fa-solid fa-phone"></i> 0161 399 4956 <i class="fa-solid fa-arrow-right arrow"></i></a>
       </div>
     </div>
@@ -281,4 +289,3 @@
 
 </body>
 </html>
-
