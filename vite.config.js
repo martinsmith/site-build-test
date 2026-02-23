@@ -26,6 +26,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         'new-lift-installations': resolve(__dirname, 'new-lift-installations.html'),
         'commercial-lifts': resolve(__dirname, 'commercial-lifts.html'),
+        contact: resolve(__dirname, 'contact.html'),
       },
     },
   },
