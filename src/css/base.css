@@ -117,9 +117,9 @@ ul { list-style: none; }
 
 /* Transition timing — applied to all animated elements */
 [class*="anim-"] {
-  transition: opacity 0.9s var(--ease-out-expo),
-              transform 0.9s var(--ease-out-expo);
-  transition-delay: calc(var(--stagger, 0) * 0.15s);
+  transition: opacity 1.2s var(--ease-out-expo),
+              transform 1.2s var(--ease-out-expo);
+  transition-delay: calc(var(--stagger, 0) * 0.18s);
 }
 
 /* Triggered states — when parent or self has .in-view */
