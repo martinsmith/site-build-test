@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Altius Lifts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <meta name="view-transition" content="same-origin">
+
+  <style>
+    body { visibility: hidden; }
+    body.loaded { visibility: visible; }
+  </style>
+
+  <script type="module" src="/src/services-main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+  <!-- @include header -->
+
+  <!-- HERO -->
+  <section id="services-hero" class="content-grid">
+    <div class="services-hero-content breakout hero-anim" style="--delay: 0.15">
+      <span class="section-tag-dark hero-anim" style="--delay: 0.15">
+        <i class="fa-solid fa-gear"></i>
+        <span>Our Services</span>
+      </span>
+      <h1 class="services-hero-title hero-anim" style="--delay: 0.3">Dependable Lift Services Throughout the North West</h1>
+      <p class="services-hero-subtitle hero-anim" style="--delay: 0.45">From new installations to emergency repairs, our certified engineers deliver expert lift solutions tailored to your building's needs. Explore our full range of services below.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- SERVICE 1: New Lift Installation -->
+  <section class="svc-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="svc-card-num breakout">01</div>
+    <div class="svc-card-inner breakout">
+      <div class="svc-card-text anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-elevator"></i> Installation</span>
+        <h2 class="svc-card-title">New Lift Installations</h2>
+        <p class="svc-card-desc">Our lift company specialises in the installation of all lifts. Whether you need a passenger lift for a commercial building or a platform lift for accessibility, we ensure every installation is completed to specification, fully compliant, and designed for purpose.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Passenger lifts</li>
+          <li><i class="fa-solid fa-check"></i> Goods lifts</li>
+          <li><i class="fa-solid fa-check"></i> Platform lifts and access lifts</li>
+          <li><i class="fa-solid fa-check"></i> Car lifts, food lifts &amp; dumbwaiters</li>
+        </ul>
+        <div class="svc-card-cta">
+          <a href="/new-lift-installations.html" class="btn btn-primary"><i class="fa-solid fa-elevator"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="svc-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/hero1.webp" alt="New lift installation" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 2: Planned Maintenance (tinted, reversed) -->
+  <section class="svc-card svc-card--tinted svc-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="svc-card-num breakout">02</div>
+    <div class="svc-card-inner breakout">
+      <div class="svc-card-text anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-clipboard-check"></i> Maintenance</span>
+        <h2 class="svc-card-title">Planned Maintenance &amp; Servicing</h2>
+        <p class="svc-card-desc">Failure to keep up with regular maintenance not only involves increased cost, it also compromises the reliability of the lift. Our planned maintenance contracts keep your lifts running safely and efficiently all year round.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Regular preventative maintenance</li>
+          <li><i class="fa-solid fa-check"></i> Compliance with Health &amp; Safety requirements</li>
+          <li><i class="fa-solid fa-check"></i> Advice and planning of future repairs</li>
+          <li><i class="fa-solid fa-check"></i> UK stock for rapid replacement parts</li>
+        </ul>
+        <div class="svc-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-clipboard-check"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="svc-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/generic2.webp" alt="Lift maintenance engineer" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 3: Modernisation -->
+  <section class="svc-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="svc-card-num breakout">03</div>
+    <div class="svc-card-inner breakout">
+      <div class="svc-card-text anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-wand-magic-sparkles"></i> Modernisation</span>
+        <h2 class="svc-card-title">Lift Modernisation</h2>
+        <p class="svc-card-desc">A modernisation can give just as good a result as a new installation, for a more cost-effective price. If your lift is suitable for modernisation, we can transform its performance, appearance, and safety to modern standards.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Reduced downtime</li>
+          <li><i class="fa-solid fa-check"></i> Improved appearance &amp; image</li>
+          <li><i class="fa-solid fa-check"></i> Greater ride quality</li>
+          <li><i class="fa-solid fa-check"></i> Minimal disruption &amp; reduced running costs</li>
+        </ul>
+        <div class="svc-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="svc-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/hero1.webp" alt="Lift modernisation" />
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SERVICE 4: Breakdowns & Repairs (tinted, reversed) -->
+  <section class="svc-card svc-card--tinted svc-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="svc-card-num breakout">04</div>
+    <div class="svc-card-inner breakout">
+      <div class="svc-card-text anim-fade-up">
+        <span class="section-tag-light"><i class="fa-solid fa-wrench"></i> Repairs</span>
+        <h2 class="svc-card-title">Breakdowns &amp; Repairs</h2>
+        <p class="svc-card-desc">Breakdowns can be a real problem for everyone impacted. Our 24/7/365 emergency callout service ensures rapid response times and minimal disruption, getting your lifts back in safe working order as quickly as possible.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> Free site survey</li>
+          <li><i class="fa-solid fa-check"></i> Comprehensive report on findings</li>
+          <li><i class="fa-solid fa-check"></i> Safety issues &amp; at-risk components highlighted</li>
+          <li><i class="fa-solid fa-check"></i> Action plan &amp; repairs to the highest standard</li>
+        </ul>
+        <div class="svc-card-cta">
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-wrench"></i> Learn more <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+      <div class="svc-card-img anim-fade-up" style="--stagger: 1">
+        <img class="img-cover" src="/generic2.webp" alt="Emergency lift repair" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX DIVIDER -->
+  <div class="parallax-divider" role="presentation">
+    <img class="img-cover" src="/hero1.webp" alt="" />
+  </div>
+
+  <!-- ENQUIRY CTA SECTION -->
+  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="enquiry-inner breakout">
+      <span class="section-tag-dark anim-fade-up" style="--stagger: 0"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+      <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your lift requirements?</h2>
+      <p class="anim-fade-up" style="--stagger: 2">Whatever your lift needs, our team of experts is here to help. Get in touch today for a free, no-obligation consultation and quotation.</p>
+      <div class="enquiry-ctas anim-fade-up" style="--stagger: 3">
+        <a href="/contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Make an enquiry <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="tel:01613994956" class="btn btn-outline-light"><i class="fa-solid fa-phone"></i> 0161 399 4956 <i class="fa-solid fa-arrow-right arrow"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- @include footer -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() { document.body.classList.add('loaded'); }, 50);
+  });
+  setTimeout(function() { document.body.classList.add('loaded'); }, 500);
+</script>
+
+</body>
+</html>

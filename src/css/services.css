@@ -1,0 +1,153 @@
+/* ===== SERVICES HERO ===== */
+#services-hero {
+  padding: 180px 0 100px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#services-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/hero1.webp') center / cover no-repeat;
+  filter: grayscale(1);
+  z-index: 0;
+  pointer-events: none;
+}
+#services-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, oklch(from var(--overlay) l c h / 0.80) 0%, oklch(from var(--overlay) l c h / 0.60) 50%, oklch(from var(--overlay) l c h / 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.services-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.services-hero-title {
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.services-hero-subtitle {
+  font-size: 17px;
+  color: var(--white-60);
+  max-width: 620px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== SERVICE SHOWCASE CARDS ===== */
+.svc-card {
+  padding: var(--section-pad);
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative service number watermark */
+.svc-card-num {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: clamp(160px, 18vw, 260px);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+/* Card base colours (light theme throughout) */
+.svc-card {
+  background: var(--white);
+}
+.svc-card-num {
+  color: oklch(30% 0.16 253.58 / 0.04);
+}
+.svc-card-title {
+  color: var(--cobalt);
+}
+.svc-card-desc {
+  color: var(--gray-600);
+}
+
+/* Tinted alternate cards — subtle cream shift */
+.svc-card--tinted {
+  background: var(--cream-light);
+}
+.svc-card--tinted .svc-card-num {
+  color: oklch(100% 0 none / 0.5);
+}
+
+/* Reversed layout: image left, text right */
+.svc-card--reversed .svc-card-inner {
+  direction: rtl;
+}
+.svc-card--reversed .svc-card-inner > * {
+  direction: ltr;
+}
+.svc-card--reversed .svc-card-num {
+  right: auto;
+  left: -10px;
+}
+
+/* Text column */
+.svc-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.svc-card-title {
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.svc-card-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.svc-card-cta {
+  margin-top: 32px;
+}
+
+/* Image column */
+.svc-card-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 440px;
+}
+
+/* ===== SERVICES PAGE RESPONSIVE ===== */
+
+/* ---- 768px ---- */
+@media (max-width: 768px) {
+  #services-hero { padding-top: 140px; }
+
+  .svc-card-inner { grid-template-columns: 1fr; }
+  .svc-card--reversed .svc-card-inner { direction: ltr; }
+  .svc-card-img { height: 300px; }
+  .svc-card-num { font-size: 120px; top: -10px; right: -5px; }
+  .svc-card--reversed .svc-card-num { left: -5px; right: auto; }
+}
+

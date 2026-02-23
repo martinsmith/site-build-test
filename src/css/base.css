@@ -25,6 +25,7 @@ ul { list-style: none; }
   --dark-bg: oklch(35% 0.11 253.58);
   --dark-mid: oklch(38% 0.12 253.58);
   --cream: oklch(93% 0.015 253.58);
+  --cream-light: oklch(95% 0.01 253.58);
   --accent: oklch(81.03% 0.1356 198.40);
   --accent-light: oklch(90% 0.08 198.40);
   --white: oklch(100% 0 none);

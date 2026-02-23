@@ -28,6 +28,7 @@ export default defineConfig({
         'commercial-lifts': resolve(__dirname, 'commercial-lifts.html'),
         contact: resolve(__dirname, 'contact.html'),
         'why-choose-us': resolve(__dirname, 'why-choose-us.html'),
+        services: resolve(__dirname, 'services.html'),
       },
     },
   },
