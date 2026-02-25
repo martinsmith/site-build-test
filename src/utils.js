@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ---- Shared config ----
 const EASE = 'expo.out';
-const SCROLL_START = 'top 40%';
+const SCROLL_START = 'top bottom';
 const SCROLL_DURATION = 1.2;
 const STAGGER = 0.18;
 
@@ -17,20 +17,27 @@ function animateHero() {
 }
 
 // ---- Scroll animations (shared core) ----
-function scrollFrom(targets, fromVars, trigger) {
+// Each element gets its own trigger point via ScrollTrigger.batch().
+// Elements that enter the viewport within the same interval are grouped
+// and staggered together — matching the per-element Webflow IX2 approach.
+function scrollFrom(targets, fromVars) {
   if (!targets.length) return;
-  gsap.from(targets, {
-    opacity: 0, duration: SCROLL_DURATION, ease: EASE, stagger: STAGGER, clearProps: 'all',
-    ...fromVars,
-    scrollTrigger: { trigger, start: SCROLL_START, once: true },
+  gsap.set(targets, { opacity: 0, ...fromVars });
+  ScrollTrigger.batch(targets, {
+    start: SCROLL_START,
+    once: true,
+    onEnter: (batch) => gsap.to(batch, {
+      opacity: 1, y: 0, x: 0,
+      duration: SCROLL_DURATION, ease: EASE, stagger: STAGGER, clearProps: 'all',
+    }),
   });
 }
 
 function animateOnScroll() {
   document.querySelectorAll('[data-observe]').forEach((section) => {
-    scrollFrom([...section.querySelectorAll('.anim-fade-up')],    { y: 40 },  section);
-    scrollFrom([...section.querySelectorAll('.anim-slide-left')], { x: -50 }, section);
-    scrollFrom([...section.querySelectorAll('.anim-slide-right')],{ x: 50 },  section);
+    scrollFrom([...section.querySelectorAll('.anim-fade-up')],    { y: 40 });
+    scrollFrom([...section.querySelectorAll('.anim-slide-left')], { x: -50 });
+    scrollFrom([...section.querySelectorAll('.anim-slide-right')],{ x: 50 });
   });
 }
 
