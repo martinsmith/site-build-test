@@ -16,9 +16,7 @@
   </style>
 
   <script type="module" src="/src/services-main.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 <body>
 
@@ -38,7 +36,7 @@
   <div class="section-divider"></div>
 
   <!-- SERVICE 1: New Lift Installation -->
-  <section class="svc-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="svc-card content-grid" data-observe>
     <div class="svc-card-num breakout">01</div>
     <div class="svc-card-inner breakout">
       <div class="svc-card-text anim-fade-up">
@@ -62,7 +60,7 @@
   </section>
 
   <!-- SERVICE 2: Planned Maintenance (tinted, reversed) -->
-  <section class="svc-card svc-card--tinted svc-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="svc-card svc-card--tinted svc-card--reversed content-grid" data-observe>
     <div class="svc-card-num breakout">02</div>
     <div class="svc-card-inner breakout">
       <div class="svc-card-text anim-fade-up">
@@ -86,7 +84,7 @@
   </section>
 
   <!-- SERVICE 3: Modernisation -->
-  <section class="svc-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="svc-card content-grid" data-observe>
     <div class="svc-card-num breakout">03</div>
     <div class="svc-card-inner breakout">
       <div class="svc-card-text anim-fade-up">
@@ -112,7 +110,7 @@
 
 
   <!-- SERVICE 4: Breakdowns & Repairs (tinted, reversed) -->
-  <section class="svc-card svc-card--tinted svc-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="svc-card svc-card--tinted svc-card--reversed content-grid" data-observe>
     <div class="svc-card-num breakout">04</div>
     <div class="svc-card-inner breakout">
       <div class="svc-card-text anim-fade-up">
@@ -141,7 +139,7 @@
   </div>
 
   <!-- ENQUIRY CTA SECTION -->
-  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section id="enquiry" class="content-grid section-dark" data-observe>
     <div class="enquiry-inner breakout">
       <span class="section-tag-dark anim-fade-up" style="--stagger: 0"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
       <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your lift requirements?</h2>

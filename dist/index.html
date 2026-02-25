@@ -15,12 +15,10 @@
     body.loaded { visibility: visible; }
   </style>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script type="module" crossorigin src="./assets/main-DCX7q0Uu.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/components-0XhZ-_1i.js">
-  <link rel="stylesheet" crossorigin href="./assets/components-BMP2okRt.css">
+
+  <script type="module" crossorigin src="./assets/main-BMQkeMRr.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/utils-D39g4Iwy.js">
+  <link rel="stylesheet" crossorigin href="./assets/utils-BMP2okRt.css">
   <link rel="stylesheet" crossorigin href="./assets/main-B131JQST.css">
 </head>
 <body>
@@ -100,29 +98,7 @@
   <div class="section-divider"></div>
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="content-grid"
-    x-data="{
-      active: 0,
-      timer: null,
-      delay: null,
-      start() {
-        clearInterval(this.timer);
-        this.timer = setInterval(() => { this.active = (this.active + 1) % 4 }, 10000);
-      },
-      pause() {
-        clearInterval(this.timer);
-        clearTimeout(this.delay);
-        this.timer = null;
-        this.delay = null;
-      },
-      restart() {
-        this.pause();
-        this.delay = setTimeout(() => this.start(), 20000);
-      }
-    }"
-    x-init="delay = setTimeout(() => start(), 20000)"
-    x-intersect.margin.-350px.once="$el.classList.add('in-view')"
-  >
+  <section id="services" class="content-grid" data-observe>
     <div class="sc-header breakout anim-fade-up">
       <span class="section-tag-light"><i class="fa-solid fa-gear"></i> Our Services</span>
       <h2 class="section-heading">Dependable Lift Servicing &amp; Maintenance Throughout the North West</h2>
@@ -130,26 +106,26 @@
 
     <!-- Tab buttons -->
     <div class="sc-tabs breakout anim-fade-up" style="--stagger: 0">
-      <button class="sc-tab" :class="{ 'active': active === 0 }" @click="active = 0; restart()">
+      <button class="sc-tab">
         <i class="fa-solid fa-elevator"></i>
         <span>Installation</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 1 }" @click="active = 1; restart()">
+      <button class="sc-tab">
         <i class="fa-solid fa-clipboard-check"></i>
         <span>Maintenance</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 2 }" @click="active = 2; restart()">
+      <button class="sc-tab">
         <i class="fa-solid fa-wand-magic-sparkles"></i>
         <span>Modernisation</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 3 }" @click="active = 3; restart()">
+      <button class="sc-tab">
         <i class="fa-solid fa-wrench"></i>
         <span>Repairs</span>
       </button>
     </div>
 
     <!-- Panel 0 — Installation -->
-    <div class="sc-panel breakout" x-show="active === 0" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 0 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./hero1.webp" alt="Lift Installation" />
       </div>
@@ -169,7 +145,7 @@
     </div>
 
     <!-- Panel 1 — Maintenance -->
-    <div class="sc-panel breakout" x-show="active === 1" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 1 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./hero1.webp" alt="Lift Maintenance" />
       </div>
@@ -187,7 +163,7 @@
     </div>
 
     <!-- Panel 2 — Modernisation -->
-    <div class="sc-panel breakout" x-show="active === 2" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 2 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./hero1.webp" alt="Lift Modernisation" />
       </div>
@@ -206,7 +182,7 @@
     </div>
 
     <!-- Panel 3 — Repairs -->
-    <div class="sc-panel breakout" x-show="active === 3" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 3 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./hero1.webp" alt="Lift Repairs" />
       </div>
@@ -228,14 +204,14 @@
 
   <!-- SECTORS SECTION -->
   <section id="sectors" class="content-grid section-dark">
-    <div class="sectors-header breakout anim-fade-up" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sectors-header breakout anim-fade-up" data-observe>
       <div>
         <span class="section-tag-dark"><i class="fa-solid fa-building"></i> Moving People &amp; Product</span>
         <h2 class="section-heading">Maintenance &amp; Support Services across multiple sectors.</h2>
       </div>
       <a href="/sectors.html" class="btn btn-outline-light"><i class="fa-solid fa-eye"></i> View more <i class="fa-solid fa-arrow-right arrow"></i></a>
     </div>
-    <div class="sectors-layout breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="sectors-layout breakout" data-observe>
       <div class="sector-main anim-slide-left">
         <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(24.37% 0.0497 252.46) 0%, oklch(31.76% 0.0639 254.75) 50%, oklch(24.37% 0.0497 252.46) 100%);"><img class="img-cover" src="./hero1.webp" alt="Sector Image" /></div>
         <div class="sector-main-content">
@@ -288,7 +264,7 @@
 
   <!-- FAQ SECTION -->
   <section id="faq" class="content-grid">
-    <div class="faq-layout breakout" x-data="{ open: null }" x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="faq-layout breakout" data-observe>
       <div class="faq-content">
         <div class="faq-header anim-fade-up">
           <span class="section-tag-light"><i class="fa-solid fa-circle-question"></i> FAQ</span>
@@ -296,63 +272,63 @@
           <p>Everything you need to know about our lift services.</p>
         </div>
         <div class="faq-list">
-          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-            <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+          <div class="faq-item anim-fade-up" style="--stagger: 0">
+            <button class="faq-trigger">
               <i class="fa-solid fa-square faq-icon"></i>
               <span>How often should a lift be serviced?</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="faq-answer" x-show="open === 0" x-collapse>
+            <div class="faq-answer">
               <p>We recommend that lifts are serviced at least every three months to ensure safe and reliable operation. Regular maintenance helps identify potential issues early, reducing the risk of costly breakdowns and ensuring compliance with safety regulations.</p>
             </div>
           </div>
-          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-            <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+          <div class="faq-item anim-fade-up" style="--stagger: 1">
+            <button class="faq-trigger">
               <i class="fa-solid fa-square faq-icon"></i>
               <span>What types of lifts do you install?</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="faq-answer" x-show="open === 1" x-collapse>
+            <div class="faq-answer">
               <p>We install a wide range of lifts including passenger lifts, goods lifts, platform lifts, car lifts, food lifts, and dumbwaiter lifts. Each installation is tailored to the specific requirements of your building and usage needs.</p>
             </div>
           </div>
-          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-            <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+          <div class="faq-item anim-fade-up" style="--stagger: 2">
+            <button class="faq-trigger">
               <i class="fa-solid fa-square faq-icon"></i>
               <span>How long does a lift modernisation take?</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="faq-answer" x-show="open === 2" x-collapse>
+            <div class="faq-answer">
               <p>The duration depends on the scope of the modernisation, but most projects are completed within two to four weeks. We work to minimise disruption to your building and its occupants throughout the process.</p>
             </div>
           </div>
-          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-            <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+          <div class="faq-item anim-fade-up" style="--stagger: 3">
+            <button class="faq-trigger">
               <i class="fa-solid fa-square faq-icon"></i>
               <span>Do you offer emergency callout services?</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="faq-answer" x-show="open === 3" x-collapse>
+            <div class="faq-answer">
               <p>Yes, we provide a 24/7/365 emergency callout service across the North West. Our engineers are on hand to respond quickly to breakdowns and entrapments, ensuring minimal downtime and maximum safety for users.</p>
             </div>
           </div>
-          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 4 }" style="--stagger: 4">
-            <button class="faq-trigger" @click="open = open === 4 ? null : 4" :class="{ 'active': open === 4 }">
+          <div class="faq-item anim-fade-up" style="--stagger: 4">
+            <button class="faq-trigger">
               <i class="fa-solid fa-square faq-icon"></i>
               <span>What areas do you cover?</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="faq-answer" x-show="open === 4" x-collapse>
+            <div class="faq-answer">
               <p>We primarily serve Manchester and the wider North West region, including Stockport, Bolton, Salford, Oldham, and surrounding areas. Contact us to confirm whether we cover your location.</p>
             </div>
           </div>
-          <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 5 }" style="--stagger: 5">
-            <button class="faq-trigger" @click="open = open === 5 ? null : 5" :class="{ 'active': open === 5 }">
+          <div class="faq-item anim-fade-up" style="--stagger: 5">
+            <button class="faq-trigger">
               <i class="fa-solid fa-square faq-icon"></i>
               <span>Is a free site survey included?</span>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="faq-answer" x-show="open === 5" x-collapse>
+            <div class="faq-answer">
               <p>Absolutely. We offer a free, no-obligation site survey for all new enquiries. Our engineers will assess your requirements and provide a detailed report with recommendations and a transparent quotation.</p>
             </div>
           </div>
@@ -367,7 +343,7 @@
 
   <!-- CTA PARTNER SECTION -->
   <section id="cta-partner" class="content-grid section-dark">
-    <div class="cta-partner-inner breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="cta-partner-inner breakout" data-observe>
       <div class="cta-partner-img anim-slide-left">
         <div class="placeholder-img" style="background: linear-gradient(135deg, oklch(27.87% 0.0367 249.26) 0%, oklch(35.31% 0.0349 248.85) 100%);"><img class="img-cover" src="./generic1.webp" alt="Partner Image" /></div>
       </div>
@@ -387,7 +363,7 @@
         <polygon points="16.9,9.94 23.87,16.91 33.81,16.91 16.9,0 0,16.91 9.94,16.91 16.9,9.94" fill="currentColor"/>
       </svg>
     </button>
-    <div class="footer-grid breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="footer-grid breakout" data-observe>
       <div class="footer-brand anim-fade-up" style="--stagger: 0">
         <a href="/"><img src="/altius-lifts.svg" alt="Altius Lifts" class="logo-img" /></a>
         <p>Dependable lift installation, maintenance, modernisation and repair services across the North West.</p>

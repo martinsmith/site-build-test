@@ -15,12 +15,10 @@
     body.loaded { visibility: visible; }
   </style>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script type="module" crossorigin src="./assets/commercial-lifts-o5tjHCox.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/components-0XhZ-_1i.js">
-  <link rel="stylesheet" crossorigin href="./assets/components-BMP2okRt.css">
+
+  <script type="module" crossorigin src="./assets/commercial-lifts-B-8AxPnc.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/utils-D39g4Iwy.js">
+  <link rel="stylesheet" crossorigin href="./assets/utils-BMP2okRt.css">
   <link rel="stylesheet" crossorigin href="./assets/commercial-lifts-Zvx_EKxM.css">
 </head>
 <body>
@@ -105,10 +103,7 @@
   <div class="section-divider"></div>
 
   <!-- LIFT TYPES — TABBED PANELS -->
-  <section id="lift-types" class="content-grid"
-    x-data="{ active: 0 }"
-    x-intersect.margin.-350px.once="$el.classList.add('in-view')"
-  >
+  <section id="lift-types" class="content-grid" data-observe>
     <div class="sc-header breakout anim-fade-up">
       <span class="section-tag-light"><i class="fa-solid fa-elevator"></i> Lift Types</span>
       <h2 class="section-heading">Types of Commercial Lifts</h2>
@@ -117,26 +112,26 @@
 
     <!-- Tab buttons -->
     <div class="sc-tabs breakout anim-fade-up" style="--stagger: 0">
-      <button class="sc-tab" :class="{ 'active': active === 0 }" @click="active = 0">
+      <button class="sc-tab">
         <i class="fa-solid fa-elevator"></i>
         <span>Traction</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 1 }" @click="active = 1">
+      <button class="sc-tab">
         <i class="fa-solid fa-arrows-up-down"></i>
         <span>Low Pit</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 2 }" @click="active = 2">
+      <button class="sc-tab">
         <i class="fa-solid fa-oil-can"></i>
         <span>Hydraulic</span>
       </button>
-      <button class="sc-tab" :class="{ 'active': active === 3 }" @click="active = 3">
+      <button class="sc-tab">
         <i class="fa-solid fa-microchip"></i>
         <span>MRL</span>
       </button>
     </div>
 
     <!-- Panel 0 — Traction Lifts -->
-    <div class="sc-panel breakout" x-show="active === 0" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 0 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./generic1.webp" alt="Traction lift" />
       </div>
@@ -147,7 +142,7 @@
     </div>
 
     <!-- Panel 1 — Low Pit Lifts -->
-    <div class="sc-panel breakout" x-show="active === 1" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 1 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./generic2.webp" alt="Low pit lift" />
       </div>
@@ -158,7 +153,7 @@
     </div>
 
     <!-- Panel 2 — Hydraulic Lifts -->
-    <div class="sc-panel breakout" x-show="active === 2" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 2 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./hero1.webp" alt="Hydraulic lift" />
       </div>
@@ -169,7 +164,7 @@
     </div>
 
     <!-- Panel 3 — Machine Room-Less (MRL) Lifts -->
-    <div class="sc-panel breakout" x-show="active === 3" x-transition:enter="sc-enter" x-transition:enter-start="sc-enter-start" x-transition:enter-end="sc-enter-end" :class="{ 'is-animating': active === 3 }">
+    <div class="sc-panel breakout">
       <div class="sc-panel-img">
         <img class="img-cover" src="./maintenance1.webp" alt="Machine room-less lift" />
       </div>
@@ -186,30 +181,30 @@
   <section class="accordion-section content-grid">
 
     <!-- Installation -->
-    <div class="accordion-group breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="accordion-group breakout" data-observe>
       <div class="accordion-group-intro anim-fade-up">
         <span class="section-tag-light"><i class="fa-solid fa-wrench"></i> Installation</span>
         <h2 class="section-heading">Commercial Lift Installation</h2>
         <p>Installing a commercial lift is a meticulous process that requires careful planning, coordination, and expertise. The comprehensive nature of this process, which includes understanding the timeline and considerations involved, should reassure property managers about the quality of work and the attention to detail involved in the installation of a new lift in their commercial properties.</p>
       </div>
-      <div class="faq-list" x-data="{ open: null }">
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+      <div class="faq-list">
+        <div class="faq-item anim-fade-up" style="--stagger: 0">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Duration of Installation</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 0" x-collapse>
+          <div class="faq-answer">
             <p>A typical commercial lift installation takes six to ten weeks to complete. However, the exact duration may vary depending on various factors, such as the height of the building, accessibility to the installation site, and the complexity of features or functionalities required for the lift.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 1">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Factors Influencing Installation Duration</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 1" x-collapse>
+          <div class="faq-answer">
             <p>Several factors can influence the duration of the installation process:</p>
             <ul>
               <li><strong>Height of the Building:</strong> Taller buildings may require more time for installation due to the additional components and structural considerations involved.</li>
@@ -232,30 +227,30 @@
     </div>
 
     <!-- Maintenance -->
-    <div class="accordion-group breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="accordion-group breakout" data-observe>
       <div class="accordion-group-intro anim-fade-up">
         <span class="section-tag-light"><i class="fa-solid fa-gear"></i> Maintenance</span>
         <h2 class="section-heading">Commercial Lift Maintenance</h2>
         <p>Regular maintenance is vital for ensuring the safety and reliability of commercial lifts. Property managers can extend the lifespan of their lifts and minimise disruptions to building operations by adhering to a comprehensive maintenance schedule.</p>
       </div>
-      <div class="faq-list" x-data="{ open: null }">
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+      <div class="faq-list">
+        <div class="faq-item anim-fade-up" style="--stagger: 0">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Frequency of Maintenance</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 0" x-collapse>
+          <div class="faq-answer">
             <p>Commercial lifts typically require maintenance every three to six months. The frequency may vary based on the age of the lift, usage patterns, and the manufacturer's recommendations. Regular servicing helps prevent unexpected breakdowns and ensures all safety mechanisms are functioning correctly.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 1">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Key Maintenance Tasks</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 1" x-collapse>
+          <div class="faq-answer">
             <p>Essential maintenance tasks include:</p>
             <ul>
               <li><strong>Lubrication:</strong> Regularly lubricating moving parts to reduce friction and wear.</li>
@@ -266,23 +261,23 @@
             </ul>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-          <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 2">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Importance of Regular Maintenance</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 2" x-collapse>
+          <div class="faq-answer">
             <p>Neglecting regular maintenance can lead to costly repairs, extended downtime, and potential safety hazards. A well-maintained lift operates more efficiently, consumes less energy, and provides a smoother experience for passengers. Proactive maintenance also helps property managers comply with regulatory requirements and avoid penalties.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-          <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 3">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Legal Requirements</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 3" x-collapse>
+          <div class="faq-answer">
             <p>Under the Lifting Operations and Lifting Equipment Regulations (LOLER) 1998, all commercial lifts in the UK must undergo a thorough examination by a competent person at least every six months. Property managers are legally responsible for ensuring their lifts are maintained and inspected in accordance with these regulations. Failure to comply can result in enforcement action, fines, or prosecution.</p>
           </div>
         </div>
@@ -300,20 +295,20 @@
   <section class="accordion-section content-grid">
 
     <!-- Safety Inspections -->
-    <div class="accordion-group breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="accordion-group breakout" data-observe>
       <div class="accordion-group-intro anim-fade-up">
         <span class="section-tag-light"><i class="fa-solid fa-shield-halved"></i> Safety</span>
         <h2 class="section-heading">Safety Inspections</h2>
         <p>Safety inspections are a critical component of commercial lift management. Regular and thorough inspections help identify potential hazards, ensure compliance with safety regulations, and protect the wellbeing of all lift users.</p>
       </div>
-      <div class="faq-list" x-data="{ open: null }">
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+      <div class="faq-list">
+        <div class="faq-item anim-fade-up" style="--stagger: 0">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Key Aspects Checked During Safety Inspections</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 0" x-collapse>
+          <div class="faq-answer">
             <p>A thorough safety inspection covers the following areas:</p>
             <ul>
               <li><strong>Door mechanisms:</strong> Ensuring doors open and close smoothly and that interlocks are functioning correctly.</li>
@@ -324,33 +319,33 @@
             </ul>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 1">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Frequency of Safety Inspections</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 1" x-collapse>
+          <div class="faq-answer">
             <p>Under LOLER regulations, commercial lifts must be thoroughly examined at least every six months by a competent person. Additional inspections may be required following any significant modification, incident, or extended period of non-use. Property managers should also conduct routine visual checks between formal inspections.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-          <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 2">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Consequences of Neglecting Safety Inspections</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 2" x-collapse>
+          <div class="faq-answer">
             <p>Failing to conduct regular safety inspections can lead to serious consequences, including equipment failure, passenger entrapment, injury, or worse. Property managers may also face legal liability, enforcement action from the Health and Safety Executive (HSE), and significant financial penalties. Maintaining a consistent inspection schedule is both a legal obligation and a moral responsibility.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-          <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 3">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Who Should Perform Safety Inspections</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 3" x-collapse>
+          <div class="faq-answer">
             <p>Safety inspections must be carried out by a competent person — typically a specialist lift engineer or an approved inspection body. These professionals have the training, experience, and equipment necessary to conduct thorough examinations and identify issues that may not be apparent to untrained personnel.</p>
           </div>
         </div>
@@ -358,20 +353,20 @@
     </div>
 
     <!-- Troubleshooting & Repairs -->
-    <div class="accordion-group breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="accordion-group breakout" data-observe>
       <div class="accordion-group-intro anim-fade-up">
         <span class="section-tag-light"><i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting</span>
         <h2 class="section-heading">Troubleshooting and Repairs</h2>
         <p>Even with diligent maintenance, commercial lifts may occasionally experience issues. Understanding how to identify problems early and respond appropriately can minimise downtime and protect the safety of building occupants.</p>
       </div>
-      <div class="faq-list" x-data="{ open: null }">
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 0 }" style="--stagger: 0">
-          <button class="faq-trigger" @click="open = open === 0 ? null : 0" :class="{ 'active': open === 0 }">
+      <div class="faq-list">
+        <div class="faq-item anim-fade-up" style="--stagger: 0">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Signs of Lift Malfunctions</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 0" x-collapse>
+          <div class="faq-answer">
             <p>Common signs that a commercial lift may be malfunctioning include:</p>
             <ul>
               <li><strong>Unusual noises:</strong> Grinding, squealing, or banging sounds during operation may indicate worn components or misalignment.</li>
@@ -381,33 +376,33 @@
             </ul>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 1 }" style="--stagger: 1">
-          <button class="faq-trigger" @click="open = open === 1 ? null : 1" :class="{ 'active': open === 1 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 1">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Response to Lift Malfunctions</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 1" x-collapse>
+          <div class="faq-answer">
             <p>When a lift malfunction is identified, the first step is to take the lift out of service to prevent further use until the issue is resolved. Property managers should contact a qualified lift engineer immediately to diagnose and repair the fault. Clear signage should be placed to inform building occupants, and alternative arrangements (such as directing users to another lift or stairwell) should be communicated promptly.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 2 }" style="--stagger: 2">
-          <button class="faq-trigger" @click="open = open === 2 ? null : 2" :class="{ 'active': open === 2 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 2">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Steps in Troubleshooting Lift Issues</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 2" x-collapse>
+          <div class="faq-answer">
             <p>Troubleshooting commercial lift issues typically involves assessing environmental factors, such as temperature fluctuations or humidity levels, which can impact lift performance. Regular inspection of lift components, including doors, safety sensors, and control panels, helps identify potential issues early and prevent costly repairs. Property managers can ensure the continued functionality and safety of commercial lifts in their buildings by prioritising proactive maintenance and prompt response to lift malfunctions.</p>
           </div>
         </div>
-        <div class="faq-item anim-fade-up" :class="{ 'is-open': open === 3 }" style="--stagger: 3">
-          <button class="faq-trigger" @click="open = open === 3 ? null : 3" :class="{ 'active': open === 3 }">
+        <div class="faq-item anim-fade-up" style="--stagger: 3">
+          <button class="faq-trigger">
             <i class="fa-solid fa-square faq-icon"></i>
             <span>Professional Intervention for Repairs</span>
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-          <div class="faq-answer" x-show="open === 3" x-collapse>
+          <div class="faq-answer">
             <p>All lift repairs should be carried out by qualified and experienced lift engineers. Attempting to repair lift equipment without proper training and tools can result in further damage, void warranties, and — most importantly — pose serious safety risks. A reputable lift service provider will diagnose the root cause of the issue, carry out repairs using genuine parts, and conduct thorough testing before returning the lift to service.</p>
           </div>
         </div>
@@ -417,7 +412,7 @@
   </section>
 
   <!-- ENQUIRY CTA SECTION -->
-  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section id="enquiry" class="content-grid section-dark" data-observe>
     <div class="enquiry-inner breakout">
       <span class="section-tag-dark anim-fade-up" style="--stagger: 0"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
       <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your commercial lift needs?</h2>
@@ -436,7 +431,7 @@
         <polygon points="16.9,9.94 23.87,16.91 33.81,16.91 16.9,0 0,16.91 9.94,16.91 16.9,9.94" fill="currentColor"/>
       </svg>
     </button>
-    <div class="footer-grid breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="footer-grid breakout" data-observe>
       <div class="footer-brand anim-fade-up" style="--stagger: 0">
         <a href="/"><img src="/altius-lifts.svg" alt="Altius Lifts" class="logo-img" /></a>
         <p>Dependable lift installation, maintenance, modernisation and repair services across the North West.</p>

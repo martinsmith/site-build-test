@@ -15,12 +15,10 @@
     body.loaded { visibility: visible; }
   </style>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script type="module" crossorigin src="./assets/sectors-DJp84qWJ.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/components-0XhZ-_1i.js">
-  <link rel="stylesheet" crossorigin href="./assets/components-BMP2okRt.css">
+
+  <script type="module" crossorigin src="./assets/sectors-6ki3oblB.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/utils-D39g4Iwy.js">
+  <link rel="stylesheet" crossorigin href="./assets/utils-BMP2okRt.css">
   <link rel="stylesheet" crossorigin href="./assets/sectors-CCLutTm6.css">
 </head>
 <body>
@@ -96,7 +94,7 @@
   <div class="section-divider"></div>
 
   <!-- SECTOR 1: Commercial (text left / image right) -->
-  <section class="sec-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="sec-card content-grid" data-observe>
     <div class="sec-card-inner breakout">
       <div class="sec-card-text anim-fade-up">
         <span class="section-tag-dark"><i class="fa-solid fa-building"></i> Commercial</span>
@@ -118,7 +116,7 @@
   </section>
 
   <!-- SECTOR 2: Retail (tinted, reversed — image left / text right) -->
-  <section class="sec-card sec-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="sec-card sec-card--reversed content-grid" data-observe>
     <div class="sec-card-inner breakout">
       <div class="sec-card-text anim-fade-up">
         <span class="section-tag-dark"><i class="fa-solid fa-store"></i> Retail</span>
@@ -140,7 +138,7 @@
   </section>
 
   <!-- SECTOR 3: Residential (text left / image right) -->
-  <section class="sec-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="sec-card content-grid" data-observe>
     <div class="sec-card-inner breakout">
       <div class="sec-card-text anim-fade-up">
         <span class="section-tag-dark"><i class="fa-solid fa-house"></i> Residential</span>
@@ -163,7 +161,7 @@
 
 
   <!-- SECTOR 4: Academic (tinted, reversed — image left / text right) -->
-  <section class="sec-card sec-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="sec-card sec-card--reversed content-grid" data-observe>
     <div class="sec-card-inner breakout">
       <div class="sec-card-text anim-fade-up">
         <span class="section-tag-dark"><i class="fa-solid fa-graduation-cap"></i> Academic</span>
@@ -185,7 +183,7 @@
   </section>
 
   <!-- SECTOR 5: Healthcare (text left / image right) -->
-  <section class="sec-card content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="sec-card content-grid" data-observe>
     <div class="sec-card-inner breakout">
       <div class="sec-card-text anim-fade-up">
         <span class="section-tag-dark"><i class="fa-solid fa-hospital"></i> Healthcare</span>
@@ -207,7 +205,7 @@
   </section>
 
   <!-- SECTOR 6: Leisure / Hospitality (tinted, reversed — image left / text right) -->
-  <section class="sec-card sec-card--reversed content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section class="sec-card sec-card--reversed content-grid" data-observe>
     <div class="sec-card-inner breakout">
       <div class="sec-card-text anim-fade-up">
         <span class="section-tag-dark"><i class="fa-solid fa-hotel"></i> Leisure / Hospitality</span>
@@ -234,7 +232,7 @@
   </div>
 
   <!-- ENQUIRY CTA SECTION -->
-  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section id="enquiry" class="content-grid section-dark" data-observe>
     <div class="enquiry-inner breakout">
       <span class="section-tag-dark anim-fade-up" style="--stagger: 0"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
       <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your lift requirements?</h2>
@@ -253,7 +251,7 @@
         <polygon points="16.9,9.94 23.87,16.91 33.81,16.91 16.9,0 0,16.91 9.94,16.91 16.9,9.94" fill="currentColor"/>
       </svg>
     </button>
-    <div class="footer-grid breakout" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+    <div class="footer-grid breakout" data-observe>
       <div class="footer-brand anim-fade-up" style="--stagger: 0">
         <a href="/"><img src="/altius-lifts.svg" alt="Altius Lifts" class="logo-img" /></a>
         <p>Dependable lift installation, maintenance, modernisation and repair services across the North West.</p>

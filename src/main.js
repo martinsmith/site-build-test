@@ -3,6 +3,9 @@ import './css/base.css';
 import './css/components.css';
 import './css/home.css';
 
+// ===== Utils =====
+import { initScrollObserver, initFAQ, initAutoTabs } from './utils.js';
+
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
 
@@ -29,3 +32,12 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// ===== Services tabbed section (auto-rotate) =====
+initAutoTabs(document.getElementById('services'));
+
+// ===== FAQ accordion =====
+initFAQ();
+
+// ===== Scroll animations =====
+initScrollObserver();

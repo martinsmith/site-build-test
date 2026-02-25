@@ -3,6 +3,9 @@ import './css/base.css';
 import './css/components.css';
 import './css/service.css';
 
+// ===== Utils =====
+import { initScrollObserver, initFAQ } from './utils.js';
+
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
 
@@ -29,6 +32,12 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// ===== FAQ accordion =====
+initFAQ();
+
+// ===== Scroll animations =====
+initScrollObserver();
 
 // ===== Parallax scroll effect =====
 const parallax = document.querySelector('.parallax-divider img');

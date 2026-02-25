@@ -16,9 +16,7 @@
   </style>
 
   <script type="module" src="/src/contact-main.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 <body>
 
@@ -38,7 +36,7 @@
   <div class="section-divider"></div>
 
   <!-- CONTACT FORM SECTION -->
-  <section id="contact-form-section" class="content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section id="contact-form-section" class="content-grid" data-observe>
     <div class="contact-form-layout breakout">
       <div class="contact-form-intro anim-fade-up">
         <span class="section-tag-light"><i class="fa-solid fa-paper-plane"></i> Send Us a Message</span>
@@ -91,7 +89,7 @@
   <div class="section-divider"></div>
 
   <!-- LOCATION SECTION -->
-  <section id="location" class="content-grid" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section id="location" class="content-grid" data-observe>
     <div class="location-layout breakout">
       <div class="location-info anim-fade-up">
         <span class="section-tag-light"><i class="fa-solid fa-location-dot"></i> Our Location</span>
@@ -139,7 +137,7 @@
   </div>
 
   <!-- ENQUIRY CTA SECTION -->
-  <section id="enquiry" class="content-grid section-dark" x-data x-intersect.margin.-350px.once="$el.classList.add('in-view')">
+  <section id="enquiry" class="content-grid section-dark" data-observe>
     <div class="enquiry-inner breakout">
       <span class="section-tag-dark anim-fade-up" style="--stagger: 0"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
       <h2 class="section-heading anim-fade-up" style="--stagger: 1">Ready to discuss your lift requirements?</h2>

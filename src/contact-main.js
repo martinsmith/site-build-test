@@ -3,6 +3,9 @@ import './css/base.css';
 import './css/components.css';
 import './css/contact.css';
 
+// ===== Utils =====
+import { initScrollObserver } from './utils.js';
+
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
 
@@ -29,6 +32,9 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// ===== Scroll animations =====
+initScrollObserver();
 
 // ===== Parallax scroll effect =====
 const parallax = document.querySelector('.parallax-divider img');

@@ -3,6 +3,9 @@ import './css/base.css';
 import './css/components.css';
 import './css/sector.css';
 
+// ===== Utils =====
+import { initScrollObserver, initFAQ, initTabs } from './utils.js';
+
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
 
@@ -29,6 +32,15 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// ===== Lift types tabbed section =====
+initTabs(document.getElementById('lift-types'));
+
+// ===== FAQ / Accordion =====
+initFAQ();
+
+// ===== Scroll animations =====
+initScrollObserver();
 
 // ===== Parallax scroll effect =====
 const parallax = document.querySelector('.parallax-divider img');
