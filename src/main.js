@@ -6,6 +6,7 @@ import './css/home.css';
 // ===== Utils =====
 import {
   initAnimations,
+  initMobileNav,
   initFAQ,
   initAutoTabs,
   animateServicesSection,
@@ -16,6 +17,9 @@ import {
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
+
+// ===== Mobile nav =====
+initMobileNav();
 
 // ===== Navbar scroll effect =====
 const navbar = document.getElementById('navbar');

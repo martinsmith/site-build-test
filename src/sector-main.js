@@ -4,10 +4,13 @@ import './css/components.css';
 import './css/sector.css';
 
 // ===== Utils =====
-import { initAnimations, initFAQ, initTabs } from './utils.js';
+import { initAnimations, initMobileNav, initFAQ, initTabs } from './utils.js';
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
+
+// ===== Mobile nav =====
+initMobileNav();
 
 // ===== Navbar scroll effect =====
 const navbar = document.getElementById('navbar');

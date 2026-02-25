@@ -291,3 +291,64 @@ export function animateCtaSection(sectionEl) {
     },
   });
 }
+
+
+// ---- Mobile nav drawer ----
+export function initMobileNav() {
+  const toggle   = document.getElementById('mobileToggle');
+  const nav      = document.getElementById('mobileNav');
+  const backdrop = document.getElementById('mobileNavBackdrop');
+  const closeBtn = document.getElementById('mobileNavClose');
+  if (!toggle || !nav || !backdrop) return;
+
+  const bars = [...toggle.querySelectorAll('span')];
+
+  function open() {
+    nav.style.visibility = 'visible';
+    nav.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    backdrop.style.pointerEvents = 'auto';
+    gsap.to(nav,      { x: 0,     duration: 0.4, ease: 'power3.out' });
+    gsap.to(backdrop, { opacity: 1, duration: 0.3 });
+    gsap.to(bars[0],  { y: 7,  rotation: 45,  duration: 0.3 });
+    gsap.to(bars[1],  { opacity: 0,            duration: 0.2 });
+    gsap.to(bars[2],  { y: -7, rotation: -45, duration: 0.3 });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    backdrop.style.pointerEvents = 'none';
+    toggle.setAttribute('aria-expanded', 'false');
+    gsap.to(nav,      { x: '100%', duration: 0.35, ease: 'power3.in',
+                        onComplete: () => { nav.style.visibility = 'hidden'; nav.setAttribute('aria-hidden', 'true'); } });
+    gsap.to(backdrop, { opacity: 0, duration: 0.3 });
+    gsap.to(bars[0],  { y: 0, rotation: 0,  duration: 0.3 });
+    gsap.to(bars[1],  { opacity: 1,          duration: 0.2 });
+    gsap.to(bars[2],  { y: 0, rotation: 0,  duration: 0.3 });
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', open);
+  closeBtn?.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  // Sub-menu accordions inside the drawer
+  nav.querySelectorAll('.mobile-nav-accordion').forEach(btn => {
+    const sub = btn.closest('.mobile-nav-group')?.querySelector('.mobile-nav-sub');
+    if (!sub) return;
+    gsap.set(sub, { height: 0, overflow: 'hidden' });
+    btn.addEventListener('click', () => {
+      const isOpen = btn.classList.contains('is-open');
+      nav.querySelectorAll('.mobile-nav-accordion.is-open').forEach(b => {
+        b.classList.remove('is-open');
+        const s = b.closest('.mobile-nav-group')?.querySelector('.mobile-nav-sub');
+        if (s) gsap.to(s, { height: 0, duration: 0.3, ease: 'power2.inOut' });
+      });
+      if (!isOpen) {
+        btn.classList.add('is-open');
+        gsap.to(sub, { height: 'auto', duration: 0.3, ease: 'power2.inOut' });
+      }
+    });
+  });
+}

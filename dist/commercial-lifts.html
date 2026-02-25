@@ -16,9 +16,9 @@
   </style>
 
 
-  <script type="module" crossorigin src="./assets/commercial-lifts-B9tdsHxg.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/utils-Dtkw-r80.js">
-  <link rel="stylesheet" crossorigin href="./assets/utils-Dpi1CoMa.css">
+  <script type="module" crossorigin src="./assets/commercial-lifts-BYYJOiw1.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/utils-DUZmMtpG.js">
+  <link rel="stylesheet" crossorigin href="./assets/utils-Cwbq7mNr.css">
   <link rel="stylesheet" crossorigin href="./assets/commercial-lifts-Zvx_EKxM.css">
 </head>
 <body>
@@ -72,11 +72,54 @@
       <div class="nav-actions">
         <a href="/contact.html" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Get in touch <i class="fa-solid fa-arrow-right arrow"></i></a>
       </div>
-      <button class="mobile-toggle" id="mobileToggle">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="/" class="logo"><img src="/altius-lifts.svg" alt="Altius Lifts" class="logo-img" /></a>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-link mobile-nav-accordion">
+          Our Services <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-nav-sub">
+          <a href="/new-lift-installations.html">New Lift Installation</a>
+          <a href="/new-lift-installations.html">Lift Modernisation</a>
+          <a href="/new-lift-installations.html">Breakdown &amp; Repairs</a>
+          <a href="/new-lift-installations.html">Planned Maintenance</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-link mobile-nav-accordion">
+          Sectors Supported <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-nav-sub">
+          <a href="/commercial-lifts.html">Commercial</a>
+          <a href="/commercial-lifts.html">Retail</a>
+          <a href="/commercial-lifts.html">Residential</a>
+          <a href="/commercial-lifts.html">Academic</a>
+          <a href="/commercial-lifts.html">Healthcare</a>
+          <a href="/commercial-lifts.html">Leisure / Hospitality</a>
+        </div>
+      </div>
+      <a href="/why-choose-us.html" class="mobile-nav-link">Why Choose Us?</a>
+      <a href="/contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+    <a href="/contact.html" class="btn btn-primary mobile-nav-cta">
+      <i class="fa-solid fa-envelope"></i> Get in touch
+    </a>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
 
 
