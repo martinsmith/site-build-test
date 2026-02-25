@@ -717,54 +717,7 @@
   margin-bottom: 24px;
 }
 
-/* Panel transitions */
-.sc-enter {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.sc-enter-start {
-  opacity: 0;
-  transform: translateY(12px);
-}
-.sc-enter-end {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Panel body staggered entrance */
-@keyframes scFadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes scSlideIn {
-  from { opacity: 0; transform: translateX(20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-.sc-panel-body h3,
-.sc-panel-body > p,
-.sc-panel-body .sc-cta {
-  opacity: 0;
-}
-.sc-panel-body .check-list li {
-  opacity: 0;
-}
-
-.sc-panel.is-animating .sc-panel-body h3 {
-  animation: scFadeIn 0.5s var(--ease-out-expo) forwards;
-  animation-delay: 0.15s;
-}
-.sc-panel.is-animating .sc-panel-body > p {
-  animation: scFadeIn 0.5s var(--ease-out-expo) forwards;
-  animation-delay: 0.35s;
-}
-.sc-panel.is-animating .sc-panel-body .check-list li {
-  animation: scSlideIn 0.4s var(--ease-out-expo) forwards;
-  animation-delay: calc(0.45s + var(--li, 0) * 0.1s);
-}
-.sc-panel.is-animating .sc-panel-body .sc-cta {
-  animation: scFadeIn 0.4s var(--ease-out-expo) forwards;
-  animation-delay: calc(0.45s + var(--li-total, 6) * 0.1s + 0.15s);
-}
+/* Panel transitions handled by GSAP (src/utils.js) */
 
 /* Panel CTA link */
 .sc-cta {

@@ -4,7 +4,7 @@ import './css/components.css';
 import './css/service.css';
 
 // ===== Utils =====
-import { initScrollObserver, initFAQ } from './utils.js';
+import { initAnimations, initFAQ } from './utils.js';
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
@@ -36,8 +36,8 @@ if (backToTop) {
 // ===== FAQ accordion =====
 initFAQ();
 
-// ===== Scroll animations =====
-initScrollObserver();
+// ===== GSAP animations (hero + scroll) =====
+initAnimations();
 
 // ===== Parallax scroll effect =====
 const parallax = document.querySelector('.parallax-divider img');

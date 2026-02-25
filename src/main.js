@@ -4,7 +4,7 @@ import './css/components.css';
 import './css/home.css';
 
 // ===== Utils =====
-import { initScrollObserver, initFAQ, initAutoTabs } from './utils.js';
+import { initAnimations, initFAQ, initAutoTabs } from './utils.js';
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
@@ -39,5 +39,5 @@ initAutoTabs(document.getElementById('services'));
 // ===== FAQ accordion =====
 initFAQ();
 
-// ===== Scroll animations =====
-initScrollObserver();
+// ===== GSAP animations (hero + scroll) =====
+initAnimations();

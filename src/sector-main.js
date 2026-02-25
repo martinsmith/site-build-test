@@ -4,7 +4,7 @@ import './css/components.css';
 import './css/sector.css';
 
 // ===== Utils =====
-import { initScrollObserver, initFAQ, initTabs } from './utils.js';
+import { initAnimations, initFAQ, initTabs } from './utils.js';
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
@@ -39,8 +39,8 @@ initTabs(document.getElementById('lift-types'));
 // ===== FAQ / Accordion =====
 initFAQ();
 
-// ===== Scroll animations =====
-initScrollObserver();
+// ===== GSAP animations (hero + scroll) =====
+initAnimations();
 
 // ===== Parallax scroll effect =====
 const parallax = document.querySelector('.parallax-divider img');

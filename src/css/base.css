@@ -99,60 +99,7 @@ ul { list-style: none; }
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
-
-/* Base states — hidden before entering viewport */
-.anim-fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.anim-slide-left {
-  opacity: 0;
-  transform: translateX(-50px);
-}
-
-.anim-slide-right {
-  opacity: 0;
-  transform: translateX(50px);
-}
-
-/* Transition timing — applied to all animated elements */
-[class*="anim-"] {
-  transition: opacity 1.2s var(--ease-out-expo),
-              transform 1.2s var(--ease-out-expo);
-  transition-delay: calc(var(--stagger, 0) * 0.18s);
-}
-
-/* Triggered states — when parent or self has .in-view */
-.in-view.anim-fade-up,
-.in-view .anim-fade-up {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.in-view.anim-slide-left,
-.in-view .anim-slide-left {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.in-view.anim-slide-right,
-.in-view .anim-slide-right {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Hero on-load animations (above fold — not scroll-triggered) */
-@keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.hero-anim {
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out-expo) forwards;
-  animation-delay: calc(var(--delay, 0) * 1s);
-}
+/* Initial states and transitions handled by GSAP (src/utils.js) */
 
 /* ===== UTILITIES ===== */
 

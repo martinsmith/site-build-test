@@ -4,7 +4,7 @@ import './css/components.css';
 import './css/services.css';
 
 // ===== Utils =====
-import { initScrollObserver } from './utils.js';
+import { initAnimations } from './utils.js';
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
@@ -33,8 +33,8 @@ if (backToTop) {
   });
 }
 
-// ===== Scroll animations =====
-initScrollObserver();
+// ===== GSAP animations (hero + scroll) =====
+initAnimations();
 
 // ===== Parallax scroll effect =====
 const parallax = document.querySelector('.parallax-divider img');
