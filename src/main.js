@@ -4,7 +4,15 @@ import './css/components.css';
 import './css/home.css';
 
 // ===== Utils =====
-import { initAnimations, initFAQ, initAutoTabs } from './utils.js';
+import {
+  initAnimations,
+  initFAQ,
+  initAutoTabs,
+  animateServicesSection,
+  animateSectorsSection,
+  animateFaqSection,
+  animateCtaSection,
+} from './utils.js';
 
 // ===== FOUC Prevention =====
 document.body.classList.add('loaded');
@@ -33,11 +41,19 @@ if (backToTop) {
   });
 }
 
-// ===== Services tabbed section (auto-rotate) =====
+// ===== Services tabbed section (auto-rotate + scroll sequence) =====
 initAutoTabs(document.getElementById('services'));
+animateServicesSection(document.getElementById('services'));
 
-// ===== FAQ accordion =====
+// ===== Sectors scroll sequence =====
+animateSectorsSection(document.getElementById('sectors'));
+
+// ===== FAQ accordion + scroll sequence =====
 initFAQ();
+animateFaqSection(document.getElementById('faq'));
 
-// ===== GSAP animations (hero + scroll) =====
+// ===== CTA scroll sequence =====
+animateCtaSection(document.getElementById('cta-partner'));
+
+// ===== GSAP animations (hero + generic scroll) =====
 initAnimations();

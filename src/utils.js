@@ -11,9 +11,35 @@ const STAGGER = 0.18;
 
 // ---- Hero (above-fold, load-time) ----
 function animateHero() {
-  const els = gsap.utils.toArray('.hero-anim');
-  if (!els.length) return;
-  gsap.from(els, { opacity: 0, y: 30, duration: 0.8, stagger: 0.15, ease: EASE, clearProps: 'all' });
+  const all = [...document.querySelectorAll('.hero-anim')];
+  if (!all.length) return;
+
+  const title   = all.find(el => el.tagName === 'H1');
+  const sub     = all.find(el => el.tagName === 'P');
+  const ctasEl  = all.find(el => /ctas/i.test(el.className));
+  const buttons = ctasEl ? [...ctasEl.querySelectorAll('.btn')] : [];
+  const badge   = all.find(el => el.classList.contains('section-tag-dark') || el.classList.contains('hero-badge'));
+  const img     = all.find(el => /hero-img/.test(el.className));
+
+  // Set initial states for each targeted element
+  if (title)  gsap.set(title,   { opacity: 0, x: 30,  y: 20 });
+  if (sub)    gsap.set(sub,     { opacity: 0, y: 30 });
+  if (buttons.length) gsap.set(buttons, { opacity: 0, y: 25 });
+  else if (ctasEl)    gsap.set(ctasEl,  { opacity: 0, y: 25 });
+  if (badge)  gsap.set(badge,   { opacity: 0, y: 20 });
+  if (img)    gsap.set(img,     { opacity: 0, y: 40 });
+
+  // Wrapper divs with hero-anim (not directly targeted) → visible immediately
+  const targeted = [title, sub, ctasEl, badge, img].filter(Boolean);
+  all.filter(el => !targeted.includes(el)).forEach(el => gsap.set(el, { opacity: 1 }));
+
+  const tl = gsap.timeline({ defaults: { ease: EASE, clearProps: 'all' } });
+  if (title)  tl.to(title,   { opacity: 1, x: 0, y: 0, duration: 1.1 });
+  if (sub)    tl.to(sub,     { opacity: 1, y: 0,        duration: 0.9 }, '-=0.65');
+  if (buttons.length) tl.to(buttons, { opacity: 1, y: 0, duration: 0.7, stagger: 0.13 }, '-=0.55');
+  else if (ctasEl)    tl.to(ctasEl,  { opacity: 1, y: 0, duration: 0.7 },                '-=0.55');
+  if (img)    tl.to(img,     { opacity: 1, y: 0,        duration: 1.0 }, '<');
+  if (badge)  tl.to(badge,   { opacity: 1, y: 0,        duration: 0.7 }, '-=0.35');
 }
 
 // ---- Scroll animations (shared core) ----
@@ -144,3 +170,124 @@ export function initFAQ() {
   });
 }
 
+
+
+// ---- Services section (index.html) ----
+export function animateServicesSection(sectionEl) {
+  if (!sectionEl) return;
+  const title = sectionEl.querySelector('.sc-header .section-heading');
+  const tag   = sectionEl.querySelector('.sc-header .section-tag-light, .sc-header .section-tag-dark');
+  const tabs  = [...sectionEl.querySelectorAll('.sc-tab')];
+
+  if (title) gsap.set(title, { opacity: 0, x: 30, y: 20 });
+  if (tag)   gsap.set(tag,   { opacity: 0, y: 20 });
+  if (tabs.length) gsap.set(tabs, { opacity: 0, y: 30 });
+
+  ScrollTrigger.create({
+    trigger: sectionEl, start: SCROLL_START, once: true,
+    onEnter: () => {
+      const tl = gsap.timeline({ defaults: { ease: EASE, clearProps: 'all' } });
+      if (title)       tl.to(title, { opacity: 1, x: 0, y: 0, duration: 1.0 });
+      if (tabs.length) tl.to(tabs,  { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, '-=0.5');
+      if (tag)         tl.to(tag,   { opacity: 1, y: 0, duration: 0.6 }, '-=0.3');
+    },
+  });
+}
+
+// ---- Sectors section (index.html) ----
+export function animateSectorsSection(sectionEl) {
+  if (!sectionEl) return;
+  const header   = sectionEl.querySelector('.sectors-header');
+  const title    = header?.querySelector('.section-heading');
+  const tag      = header?.querySelector('.section-tag-dark');
+  const viewMore = header?.querySelector('.btn');
+  const layout   = sectionEl.querySelector('.sectors-layout');
+  const main     = layout?.querySelector('.sector-main');
+  const cards    = [...(layout?.querySelectorAll('.sector-card') ?? [])];
+
+  if (title)         gsap.set(title,    { opacity: 0, x: 30, y: 20 });
+  if (tag)           gsap.set(tag,      { opacity: 0, y: 20 });
+  if (viewMore)      gsap.set(viewMore, { opacity: 0, y: 20 });
+  if (main)          gsap.set(main,     { opacity: 0, y: 40 });
+  if (cards.length)  gsap.set(cards,    { opacity: 0, y: 35 });
+
+  // Trigger 1: header row — title then tag + view-more fade last
+  if (header) ScrollTrigger.create({
+    trigger: header, start: SCROLL_START, once: true,
+    onEnter: () => {
+      const tl = gsap.timeline({ defaults: { ease: EASE, clearProps: 'all' } });
+      if (title) tl.to(title, { opacity: 1, x: 0, y: 0, duration: 1.0 });
+      const last = [tag, viewMore].filter(Boolean);
+      if (last.length) tl.to(last, { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, '-=0.3');
+    },
+  });
+
+  // Trigger 2: layout — sector-main then cards cascade (slower stagger)
+  if (layout) ScrollTrigger.create({
+    trigger: layout, start: SCROLL_START, once: true,
+    onEnter: () => {
+      const tl = gsap.timeline({ defaults: { ease: EASE, clearProps: 'all' } });
+      if (main)         tl.to(main,  { opacity: 1, y: 0, duration: 1.0 });
+      if (cards.length) tl.to(cards, { opacity: 1, y: 0, duration: 1.0, stagger: 0.22 }, '-=0.5');
+    },
+  });
+}
+
+// ---- FAQ section (index.html + reusable) ----
+export function animateFaqSection(sectionEl) {
+  if (!sectionEl) return;
+  const layout = sectionEl.querySelector('.faq-layout') || sectionEl;
+  const title  = layout.querySelector('.section-heading');
+  const tag    = layout.querySelector('.section-tag-light, .section-tag-dark');
+  const sub    = layout.querySelector('.faq-header p');
+  const items  = [...layout.querySelectorAll('.faq-item')];
+  const img    = layout.querySelector('.faq-img');
+
+  if (title)        gsap.set(title, { opacity: 0, x: 30, y: 20 });
+  if (tag)          gsap.set(tag,   { opacity: 0, y: 20 });
+  if (sub)          gsap.set(sub,   { opacity: 0, y: 20 });
+  if (items.length) gsap.set(items, { opacity: 0, x: 50 });
+  if (img)          gsap.set(img,   { opacity: 0, y: 30 });
+
+  ScrollTrigger.create({
+    trigger: layout, start: SCROLL_START, once: true,
+    onEnter: () => {
+      const tl = gsap.timeline({ defaults: { ease: EASE, clearProps: 'all' } });
+      if (title)        tl.to(title, { opacity: 1, x: 0, y: 0, duration: 1.0 });
+      if (sub)          tl.to(sub,   { opacity: 1, y: 0, duration: 0.7 }, '-=0.5');
+      if (tag)          tl.to(tag,   { opacity: 1, y: 0, duration: 0.6 }, '-=0.4');
+      if (items.length) tl.to(items, { opacity: 1, x: 0, duration: 0.7, stagger: 0.12 }, '-=0.3');
+      if (img)          tl.to(img,   { opacity: 1, y: 0, duration: 0.9 }, '<');
+    },
+  });
+}
+
+// ---- CTA partner section (index.html) ----
+export function animateCtaSection(sectionEl) {
+  if (!sectionEl) return;
+  const inner  = sectionEl.querySelector('.cta-partner-inner') || sectionEl;
+  const img    = inner.querySelector('.cta-partner-img');
+  const textEl = inner.querySelector('.cta-partner-text');
+  const title  = textEl?.querySelector('h2');
+  const para   = textEl?.querySelector('p');
+  const tag    = textEl?.querySelector('.section-tag-dark, .section-tag-light');
+  const btn    = textEl?.querySelector('.btn');
+
+  if (img)   gsap.set(img,   { opacity: 0, x: -50 });
+  if (title) gsap.set(title, { opacity: 0, x: 30, y: 20 });
+  if (para)  gsap.set(para,  { opacity: 0, y: 20 });
+  if (tag)   gsap.set(tag,   { opacity: 0, y: 20 });
+  if (btn)   gsap.set(btn,   { opacity: 0, y: 20 });
+
+  ScrollTrigger.create({
+    trigger: inner, start: SCROLL_START, once: true,
+    onEnter: () => {
+      const tl = gsap.timeline({ defaults: { ease: EASE, clearProps: 'all' } });
+      if (img)   tl.to(img,   { opacity: 1, x: 0, duration: 1.0 });
+      if (title) tl.to(title, { opacity: 1, x: 0, y: 0, duration: 1.0 }, '<');
+      if (para)  tl.to(para,  { opacity: 1, y: 0, duration: 0.8 }, '-=0.5');
+      const last = [tag, btn].filter(Boolean);
+      if (last.length) tl.to(last, { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, '-=0.3');
+    },
+  });
+}
